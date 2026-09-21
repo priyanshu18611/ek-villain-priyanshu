@@ -1,23 +1,25 @@
-# EK VILLAIN — PRIYANSHU // ULTRA DIGITAL REALITY
+# EK VILLAIN // DIGITAL REALITY X
 
-Premium responsive developer portfolio built as an interactive digital experience.
+An experimental, recruiter-friendly interactive developer portfolio.
 
-## Stack
-- HTML5 / CSS3 / JavaScript
-- Three.js WebGL ambient world
-- Responsive/adaptive rendering
-- Command palette
-- Interactive project universe
-- Magnetic UI and custom cursor
-- Accessibility reduced-motion support
+## Highlights
+- Three.js adaptive ambient universe
+- Interactive project constellation
+- Project engineering drawer with GitHub links
+- Cinematic boot sequence
+- Magnetic UI + custom cursor
+- Command palette (Ctrl/Cmd + K)
+- Responsive mobile navigation
+- Adaptive particle count and pixel ratio
+- Reduced-motion accessibility support
 - GitHub Pages compatible
 
 ## Structure
-- `index.html`
-- `style.css`
-- `script.js`
-- `assets/images/priyanshu-profile.png`
-- `assets/resume/Priyanshu-Kumar-Resume.pdf`
+index.html
+style.css
+script.js
+assets/images/priyanshu-profile.png
+assets/resume/Priyanshu-Kumar-Resume.pdf
 
 ## Deploy
-Upload the contents to the repository root, keep `assets/` intact, then enable GitHub Pages from `main` / root.
+Replace the four root files in the existing repository and keep the existing `assets/` folder. Enable GitHub Pages from `main` / root.
