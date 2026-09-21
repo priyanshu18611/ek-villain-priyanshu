@@ -26,3 +26,5 @@ README.md
 assets/images/priyanshu-profile.jpg
 assets/images/priyanshu-original.png
 assets/resume/Priyanshu-Kumar-Resume.pdf
+
+Complete content: Education + Certifications + Experience + Projects + Skills + Resume + Socials.
