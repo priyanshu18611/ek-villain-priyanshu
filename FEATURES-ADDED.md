@@ -45,6 +45,38 @@ animation and 13 new features on top.
 All animation respects `prefers-reduced-motion`, the cursor auto-disables on
 touch devices, and the layout is fully responsive down to mobile.
 
+## Round 2 — advanced / role-targeted features
+14. **Portfolio Lens Switcher** (hero) — three toggles, "SOFTWARE ENGINEER /
+    DATA ANALYST / FULL STACK DEV". Each one rewrites the hero tagline,
+    dims/highlights the matching columns in the Tools stack, and syncs the
+    Archive filter — so a recruiter can instantly see the version of the
+    portfolio relevant to the role they're hiring for.
+15. **Data Analytics Lab — live BI dashboard** (new scene, Power BI/Tableau
+    style) — a real working dashboard built with Chart.js: 4 KPI cards, a
+    quarterly revenue bar chart and a category-mix donut chart, all driven
+    by a region filter dropdown. Clearly labeled as illustrative data so it
+    never misrepresents real client numbers, while genuinely demonstrating
+    BI/dashboard-building skill.
+16. **Command palette (⌘K / Ctrl+K)** — a Linear/Vercel-style quick-jump
+    search: type to jump to any scene or project, or run actions (copy
+    email, toggle Villain Mode, preview resume, open GitHub/LinkedIn).
+    Full keyboard support (↑↓, Enter, Esc).
+17. **Software Engineer terminal widget** (About section) — an animated,
+    self-typing terminal (`whoami`, `cat core_skills.json`, a git commit)
+    that plays once it scrolls into view — a fast, credible "I write code"
+    moment for engineering-focused recruiters.
+18. **System architecture diagram** (Tools section) — a hoverable four-node
+    diagram (Client → API Layer → Data Layer → Deployment) showing how a
+    full-stack product is actually wired, mirroring the real stack used in
+    CareerPilot AI and EcoSentinel.
+19. **Live GitHub stat card** (Experience section) — a second, dedicated
+    card pulling real public-repo/follower/following counts from the GitHub
+    API, independent from the hero's inline stat line.
+20. **Resume quick-view modal** — "VIEW RESUME" now opens an inline PDF
+    preview on desktop instead of jumping straight to a new tab (mobile
+    still opens the PDF directly, since in-page PDF viewers are unreliable
+    on small screens), with an "Open full PDF" fallback inside the modal.
+
 ## Notes
 - Animations use GSAP + ScrollTrigger loaded from cdnjs (no build step, no
   npm install — works exactly like your current plain HTML/CSS/JS setup).
