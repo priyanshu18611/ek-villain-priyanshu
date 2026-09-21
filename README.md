@@ -1,35 +1,43 @@
-# EK VILLAIN // PRIME X
+# EK VILLAIN — PRIYANSHU
 
-High-performance cinematic developer portfolio.
+A cinematic, editorial and 3D portfolio for **Priyanshu Kumar**.
 
-### Highlights
-- Three.js adaptive 3D particle field
-- High-quality focused profile portrait asset
-- Interactive 3D portrait tilt
-- Magnetic buttons and project cards
-- Cinematic boot sequence
-- Scroll reveal system
-- Command palette (Ctrl/Cmd + K)
-- Responsive desktop + mobile layouts
-- Device-aware particle density / DPR
-- Reduced-motion accessibility
-- GitHub Pages compatible
+## Visual direction
 
-### Important
-Keep `assets/` intact. Replace only the four root files in an existing repository if deploying over the current portfolio.
+This build intentionally combines three visual languages from the provided reference videos without copying their exact layouts or text:
 
-### Structure
-index.html
-style.css
-script.js
-README.md
-assets/images/priyanshu-profile.jpg
-assets/images/priyanshu-original.png
-assets/resume/Priyanshu-Kumar-Resume.pdf
+1. **Dark cinematic 3D presentation** — perspective screens, laptop/device mockups, red accents, depth and motion.
+2. **Minimal editorial portfolio** — oversized typography, whitespace, monochrome imagery, structured navigation and strong section hierarchy.
+3. **Case-study storytelling** — Details, Goal, Approach, Platform and project metrics presented like a premium design case study.
 
-Complete content: Education + Certifications + Experience + Projects + Skills + Resume + Socials.
+## Included
 
+- EK VILLAIN hero experience
+- About / identity section
+- Six featured projects
+- Case-study mode
+- Full technology matrix
+- Experience + education timeline
+- Certification vault
+- Contact + social links
+- Responsive mobile layout
+- Mouse 3D tilt and scroll reveals
+- Project archive filters
+- Local resume PDF and profile assets
 
-## ULTIMATE EDITION
-This edition blends the visual language of the supplied references: cinematic dark 3D presentation, editorial case-study cards, perspective interfaces, clean professional information hierarchy, and a live GitHub repository vault.
-It keeps the complete profile content: projects, skills/tools, internships, education, certifications, resume and social/contact links.
+## Projects
+
+- CareerPilot AI
+- EcoSentinel
+- Enterprise Sales Analytics
+- Brain Tumor Detection using MRI Images
+- Cricket Score Predictor
+- Spam Mail Detection
+
+## Tech used in the portfolio
+
+HTML5 · CSS3 · Vanilla JavaScript · CSS 3D Transforms · IntersectionObserver · Responsive Design
+
+## Deploy
+
+This is a static site. Upload `index.html`, `style.css`, `script.js`, `assets/` and `README.md` to the root of your GitHub Pages repository.

@@ -1,126 +1,93 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#050507">
-<meta name="description" content="EK VILLAIN — PRIYANSHU | Software Engineer • Data Analytics • Full Stack Developer">
-<title>EK VILLAIN // PRIYANSHU</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#070707"><meta name="description" content="EK VILLAIN — PRIYANSHU | Software Engineer • Data Analytics • Full Stack Developer">
+<title>EK VILLAIN — PRIYANSHU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="boot" aria-hidden="true"><div class="boot-panel"><div class="boot-mark">EV<span>∞</span></div><div class="boot-line"><i></i></div><div id="boot-msg">CALIBRATING DIGITAL REALITY</div><small>PRIYANSHU // ENGINEERING SYSTEM</small></div></div>
-<canvas id="scene"></canvas>
-<div class="grain"></div><div class="vignette"></div>
-<div class="hud-top"><span>EV.OS <b>ONLINE</b></span><span id="liveClock">--:--:--</span><span>2026 // INDIA</span></div>
-<div class="scroll-progress"><i id="progress"></i></div>
-
+<div class="loader"><div class="loader-word">EK VILLAIN</div><div class="loader-bar"><i></i></div><small>PRIYANSHU / DIGITAL PORTFOLIO</small></div>
+<div class="cursor"><i></i></div><div class="noise"></div><div class="scrollline"><i></i></div>
 <header class="nav">
-<a href="#home" class="brand magnetic"><strong>EV</strong><span>EK VILLAIN</span><em>// PRIYANSHU</em></a>
-<nav><a href="#about">01</a><a href="#projects">02</a><a href="#stack">03</a><a href="#experience">04</a><a href="#education">05</a><a href="#certifications">06</a><a href="#lab">07</a><a href="#contact">08</a></nav>
-<button id="menu" aria-label="Open menu">☰</button>
+<a class="logo" href="#top"><b>EV</b><span>EK VILLAIN</span><em>// PRIYANSHU</em></a>
+<nav><a href="#about">ABOUT</a><a href="#work">WORK</a><a href="#stack">STACK</a><a href="#journey">JOURNEY</a><a href="#contact">CONTACT</a></nav>
+<button id="menu">MENU <span>+</span></button>
 </header>
-<div id="mobileMenu"><a href="#about">ABOUT</a><a href="#projects">PROJECTS</a><a href="#stack">STACK</a><a href="#experience">EXPERIENCE</a><a href="#contact">CONTACT</a></div>
+<div class="mobile-nav" id="mobileNav"><a href="#about">ABOUT</a><a href="#work">WORK</a><a href="#stack">STACK</a><a href="#journey">JOURNEY</a><a href="#contact">CONTACT</a></div>
 
-<main>
-<section id="home" class="hero">
-<div class="hero-grid">
-<div class="hero-copy reveal">
-<div class="eyebrow"><span>SOFTWARE ENGINEER</span><span>DATA ANALYTICS</span><span>FULL STACK</span></div>
-<h1><small>EK</small><b>VILLAIN</b></h1>
-<div class="identity-line"><strong>PRIYANSHU KUMAR</strong><span>BUILD. INNOVATE. EVOLVE.</span></div>
-<p>Engineering practical digital products across software, data, analytics and intelligent systems.</p>
-<div class="hero-actions"><a href="#projects" class="button magnetic">ENTER EXPERIENCE <span>↗</span></a><a href="assets/resume/Priyanshu-Kumar-Resume.pdf" target="_blank" class="button secondary magnetic">VIEW RESUME</a></div>
-</div>
-
-<div class="portrait-stage reveal">
-<div class="portrait-halo"></div><div class="portrait-grid"></div>
-<div class="portrait-card" id="portraitCard">
-<div class="portrait-image"><img src="assets/images/priyanshu-profile.jpg" alt="Priyanshu Kumar"></div>
-<div class="portrait-overlay"></div>
-<div class="portrait-caption"><span>IDENTITY VERIFIED</span><b>PRIYANSHU</b><small>SOFTWARE ENGINEER</small></div>
-<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
-</div>
-<div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div>
-</div>
-</div>
-<div class="hero-footer"><span>SCROLL TO EXPLORE</span><span>01 / 05</span><span>HIGH-PERFORMANCE MODE</span></div>
+<main id="top">
+<!-- WORLD 01 : DARK CINEMATIC / 3D -->
+<section class="hero dark-world">
+<div class="hero-copy reveal"><p class="micro">SOFTWARE ENGINEER / DATA ANALYTICS / FULL STACK</p><h1><span>EK</span><strong>VILLAIN</strong></h1><div class="hero-rule"></div><div class="hero-meta"><b>PRIYANSHU KUMAR</b><span>BUILD. INNOVATE. EVOLVE.</span></div><p class="hero-desc">I build software, analytics systems and intelligent products where engineering meets visual storytelling.</p><div class="actions"><a class="pill red" href="#work">ENTER THE WORK <i>↗</i></a><a class="pill ghost" href="assets/resume/Priyanshu-Kumar-Resume.pdf" target="_blank">VIEW RESUME</a></div></div>
+<div class="hero-device reveal tilt" data-tilt="true"><div class="device-shadow"></div><div class="screen"><div class="screen-nav"><b>PRIYANSHU</b><span>WORK&nbsp;&nbsp; ABOUT&nbsp;&nbsp; CONTACT</span></div><div class="screen-main"><small>SELECTED / 2026</small><strong>ENGINEER<br>THE<br>EXPERIENCE.</strong><i></i></div><div class="screen-foot"><span>01 — 06</span><span>SOFTWARE / DATA / SYSTEMS</span></div></div><div class="keyboard"></div></div>
+<div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span>01 / 05</span><span>HIGH PERFORMANCE / ORIGINAL BUILD</span></div>
 </section>
 
-<section id="about" class="section">
-<div class="section-tag">01 // IDENTITY</div>
-<div class="two-col reveal"><h2>Build with<br><i>purpose.</i></h2><div class="prose"><p>I’m Priyanshu Kumar, a CSE graduate focused on software engineering, data analytics and full-stack development. This portfolio turns the work into an interactive, high-performance digital experience.</p><div class="metrics"><div><b>06+</b><small>FEATURED PROJECTS</small></div><div><b>03</b><small>INTERNSHIPS</small></div><div><b>08+</b><small>CORE SKILLS</small></div></div></div></div>
+<!-- WORLD 02 : EDITORIAL WHITE / BIG TYPOGRAPHY -->
+<section id="about" class="editorial white-world">
+<div class="topline"><span>01 — ABOUT</span><span>THE PERSON BEHIND THE SYSTEM</span></div>
+<div class="editorial-head reveal"><h2>I TURN<br><em>IDEAS</em><br>INTO SYSTEMS.</h2><div><p>Priyanshu Kumar is a Computer Science engineer working across software engineering, data analytics, full-stack development and machine learning.</p><a href="#contact">LET'S BUILD SOMETHING ↗</a></div></div>
+<div class="about-grid reveal"><div class="portrait-polaroid"><img src="assets/images/priyanshu-profile.jpg" alt="Priyanshu Kumar"><span>PRIYANSHU / 2026</span></div><div class="about-copy"><div><small>FOCUS</small><b>SOFTWARE<br>ENGINEERING</b></div><div><small>FOCUS</small><b>DATA<br>ANALYTICS</b></div><div><small>FOCUS</small><b>FULL STACK<br>DEVELOPMENT</b></div><p>I care about clean architecture, useful data, strong interfaces and products that feel deliberate from the first interaction to the final result.</p></div></div>
+<div class="stats-row"><div><b>06+</b><span>FEATURED PROJECTS</span></div><div><b>03</b><span>INTERNSHIPS</span></div><div><b>08+</b><span>CREDENTIALS</span></div><div><b>01</b><span>ENGINEERING MINDSET</span></div></div>
 </section>
 
-<section id="projects" class="section project-section">
-<div class="section-tag">02 // PROJECT LAB</div>
-<div class="two-col reveal"><h2>Systems<br><i>in motion.</i></h2><p class="prose">Interactive cards use depth, spotlight and motion while keeping the actual engineering information one click away.</p></div>
-<div class="project-grid">
-<article class="project-card magnetic-card" data-project="CareerPilot AI"><span>01</span><div class="project-icon">AI</div><h3>CAREERPILOT AI</h3><p>AI-powered career intelligence, resume analysis and ATS optimization.</p><div class="tags">PYTHON · FASTAPI · AI</div><a href="https://github.com/priyanshu18611/careerpilot-ai" target="_blank">GITHUB ↗</a></article>
-<article class="project-card magnetic-card" data-project="EcoSentinel"><span>02</span><div class="project-icon">IO</div><h3>ECOSENTINEL</h3><p>IoT wildlife-conservation platform with real-time alerts.</p><div class="tags">MERN · IOT · SOCKET.IO</div><a href="https://github.com/priyanshu18611/EcoSentinel" target="_blank">GITHUB ↗</a></article>
-<article class="project-card magnetic-card" data-project="Sales Analytics"><span>03</span><div class="project-icon">SQL</div><h3>SALES ANALYTICS</h3><p>Enterprise sales intelligence using SQL, Python and Power BI.</p><div class="tags">SQL · DAX · POWER BI</div><a href="https://github.com/priyanshu18611" target="_blank">GITHUB ↗</a></article>
-<article class="project-card magnetic-card" data-project="Brain Tumor Detection"><span>04</span><div class="project-icon">ML</div><h3>BRAIN TUMOR</h3><p>MRI image classification with CNN and computer vision.</p><div class="tags">CNN · TENSORFLOW · OPENCV</div><a href="https://github.com/priyanshu18611/brain-tumor-detection" target="_blank">GITHUB ↗</a></article>
-<article class="project-card magnetic-card" data-project="Cricket Score Predictor"><span>05</span><div class="project-icon">XP</div><h3>CRICKET PREDICTOR</h3><p>Machine-learning score prediction workflow.</p><div class="tags">PYTHON · XGBOOST</div><a href="https://github.com/priyanshu18611/Cricket-Score-Predictor" target="_blank">GITHUB ↗</a></article>
-<article class="project-card magnetic-card" data-project="Spam Mail Detection"><span>06</span><div class="project-icon">NLP</div><h3>SPAM DETECTION</h3><p>Text classification workflow using ML and NLP features.</p><div class="tags">NLP · TF-IDF · ML</div><a href="https://github.com/priyanshu18611/Spam-Mail-Detection" target="_blank">GITHUB ↗</a></article>
+<!-- WORLD 03 : FOLDER / PROJECT ARCHIVE -->
+<section id="work" class="archive dark-world">
+<div class="topline light"><span>02 — SELECTED WORK</span><span>OPEN THE FILES</span></div>
+<div class="archive-title reveal"><span>PROJECT</span><h2>ARCHIVE</h2><p>Six systems. Different problems. One engineering approach: understand → design → build → test → evolve.</p></div>
+<div class="folder-tabs"><button class="active">ALL</button><button>SOFTWARE</button><button>DATA</button><button>ML / AI</button></div>
+<div class="work-grid">
+<article class="work-card featured reveal tilt"><div class="folder">01 / AI</div><div class="work-visual career"><div class="ui-window"><small>CAREERPILOT AI</small><b>CAREER<br>INTELLIGENCE</b><span>RESUME ANALYZER · ATS · COACH</span></div></div><div class="work-info"><h3>CAREERPILOT AI</h3><p>AI-powered career intelligence platform for resume analysis, ATS optimization, job matching and coaching.</p><div><b>PYTHON</b><b>FASTAPI</b><b>AI</b></div><a href="https://github.com/priyanshu18611/careerpilot-ai" target="_blank">OPEN REPOSITORY ↗</a></div></article>
+<article class="work-card reveal tilt"><div class="folder">02 / IOT</div><div class="work-visual eco"><div class="radar"><i></i><b>LIVE</b></div></div><div class="work-info"><h3>ECOSENTINEL</h3><p>IoT wildlife-conservation concept with REST APIs, alert logic, Socket.io and an IoT simulator.</p><div><b>MERN</b><b>IOT</b><b>SOCKET.IO</b></div><a href="https://github.com/priyanshu18611/EcoSentinel" target="_blank">OPEN REPOSITORY ↗</a></div></article>
+<article class="work-card reveal tilt"><div class="folder">03 / DATA</div><div class="work-visual sales"><div class="bars"><i></i><i></i><i></i><i></i><i></i></div><b>SALES / INTELLIGENCE</b></div><div class="work-info"><h3>ENTERPRISE SALES ANALYTICS</h3><p>Sales intelligence engine using SQL, Python, Star Schema concepts, ETL and Power BI / DAX.</p><div><b>SQL</b><b>POWER BI</b><b>DAX</b></div><a href="https://github.com/priyanshu18611" target="_blank">VIEW GITHUB ↗</a></div></article>
+<article class="work-card reveal tilt"><div class="folder">04 / ML</div><div class="work-visual brain"><div class="scan"></div><b>MRI / CNN</b></div><div class="work-info"><h3>BRAIN TUMOR DETECTION</h3><p>MRI image classification workflow using CNN, TensorFlow and OpenCV. Reported accuracy: 76%.</p><div><b>PYTHON</b><b>TENSORFLOW</b><b>OPENCV</b></div><a href="https://github.com/priyanshu18611/brain-tumor-detection" target="_blank">OPEN REPOSITORY ↗</a></div></article>
+<article class="work-card reveal tilt"><div class="folder">05 / ML</div><div class="work-visual cricket"><div class="score"><small>PREDICTED SCORE</small><b>168</b><span>R² 0.85 · MAE 8.49</span></div></div><div class="work-info"><h3>CRICKET SCORE PREDICTOR</h3><p>Machine-learning score prediction workflow trained on 19,000+ records.</p><div><b>XGBOOST</b><b>SCIKIT-LEARN</b><b>PYTHON</b></div><a href="https://github.com/priyanshu18611/Cricket-Score-Predictor" target="_blank">OPEN REPOSITORY ↗</a></div></article>
+<article class="work-card reveal tilt"><div class="folder">06 / NLP</div><div class="work-visual spam"><div class="mail-card"><b>MESSAGE</b><span>classification / TF-IDF</span><i>SPAM?</i></div></div><div class="work-info"><h3>SPAM MAIL DETECTION</h3><p>Text classification project using NLP features, TF-IDF and machine learning.</p><div><b>PYTHON</b><b>TF-IDF</b><b>ML</b></div><a href="https://github.com/priyanshu18611/Spam-Mail-Detection" target="_blank">OPEN REPOSITORY ↗</a></div></article>
 </div>
 </section>
 
-<section id="stack" class="section">
-<div class="section-tag">03 // ENGINEERING CORE</div>
-<div class="two-col reveal"><h2>Technology<br><i>arsenal.</i></h2><p class="prose">Not just a skills list — a complete map of the tools used across software engineering, analytics, ML, APIs, databases, testing and delivery.</p></div>
-<div class="tool-matrix reveal">
-  <div class="tool-group"><small>LANGUAGES</small><div><b>Python</b><b>Java</b><b>C</b><b>C++</b><b>JavaScript</b><b>SQL</b><b>HTML</b><b>CSS</b></div></div>
-  <div class="tool-group"><small>FULL STACK</small><div><b>React</b><b>Node.js</b><b>Express</b><b>FastAPI</b><b>REST APIs</b><b>Socket.io</b><b>JWT</b></div></div>
-  <div class="tool-group"><small>DATA / ML</small><div><b>Pandas</b><b>NumPy</b><b>Scikit-learn</b><b>XGBoost</b><b>TensorFlow</b><b>OpenCV</b><b>NLP</b></div></div>
-  <div class="tool-group"><small>DATABASE</small><div><b>MySQL</b><b>MongoDB</b><b>JDBC</b><b>Star Schema</b><b>ETL</b><b>Database Queries</b></div></div>
-  <div class="tool-group"><small>ANALYTICS</small><div><b>Power BI</b><b>DAX</b><b>Excel</b><b>Data Validation</b><b>Visualization</b><b>Cohort Analysis</b></div></div>
-  <div class="tool-group"><small>ENGINEERING TOOLS</small><div><b>Git</b><b>GitHub</b><b>VS Code</b><b>Jupyter</b><b>Postman</b><b>JIRA</b><b>Render</b></div></div>
+<!-- CASE STUDY WORLD : EDITORIAL -->
+<section class="case-study white-world">
+<div class="case-intro reveal"><div><span>03 — CASE STUDY MODE</span><h2>FROM<br><em>PROBLEM</em><br>TO PRODUCT.</h2></div><p>The visual language shifts into an editorial case-study layout: details, goal, approach, platforms and measurable project facts.</p></div>
+<div class="case-panel reveal"><div class="case-copy"><small>CASE 01 / CAREERPILOT AI</small><h3>CAREER<br>INTELLIGENCE<br>PLATFORM</h3><div class="detail-grid"><div><span>TYPE</span><b>FULL STACK / AI</b></div><div><span>ROLE</span><b>BUILDER</b></div><div><span>PLATFORM</span><b>WEB APP</b></div><div><span>STACK</span><b>PYTHON / FASTAPI</b></div></div><div class="case-block"><span>GOAL</span><p>Bring resume analysis, ATS optimization and career guidance into one focused workflow.</p></div><div class="case-block"><span>APPROACH</span><p>Design the experience around actionable analysis, clear outputs and an extensible API-first backend.</p></div></div><div class="case-art"><div class="laptop-mini"><div class="mini-screen"><small>AI RESUME ANALYZER</small><strong>ATS<span>READY</span></strong><i></i><i></i><i></i></div></div><div class="floating-chip c1">ATS SCORE</div><div class="floating-chip c2">JOB MATCH</div><div class="floating-chip c3">COACH</div></div></div>
+<div class="case-panel reverse reveal"><div class="case-copy"><small>CASE 02 / ENTERPRISE SALES ANALYTICS</small><h3>DATA<br>INTO<br>DECISIONS.</h3><div class="detail-grid"><div><span>TYPE</span><b>DATA ANALYTICS</b></div><div><span>DATA</span><b>STAR SCHEMA</b></div><div><span>BI</span><b>POWER BI / DAX</b></div><div><span>PROCESS</span><b>ETL / VALIDATION</b></div></div><div class="case-block"><span>GOAL</span><p>Turn structured sales data into a business-facing intelligence layer.</p></div><div class="case-block"><span>APPROACH</span><p>Combine SQL validation, analytical transformations, cohort analysis and dashboard storytelling.</p></div></div><div class="case-art chart-art"><div class="chart-board"><div class="chart-head">REVENUE / TREND</div><div class="chart-lines"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="chart-bars"><b></b><b></b><b></b><b></b><b></b><b></b></div></div><div class="floating-chip c1">SQL</div><div class="floating-chip c2">DAX</div><div class="floating-chip c3">POWER BI</div></div></div>
+</section>
+
+<!-- STACK -->
+<section id="stack" class="stack-world dark-world">
+<div class="topline light"><span>04 — STACK</span><span>THE TOOLBOX</span></div><div class="stack-head reveal"><h2>TOOLS<br><em>OF THE TRADE.</em></h2><p>Languages, full-stack systems, data tooling, ML frameworks, databases and engineering utilities used across the portfolio.</p></div>
+<div class="stack-grid">
+<div class="stack-box reveal"><small>LANGUAGES</small><div><b>Python</b><b>Java</b><b>C</b><b>C++</b><b>JavaScript</b><b>SQL</b><b>HTML</b><b>CSS</b></div></div>
+<div class="stack-box reveal"><small>FULL STACK</small><div><b>React</b><b>Node.js</b><b>Express</b><b>FastAPI</b><b>REST APIs</b><b>Socket.io</b><b>JWT</b></div></div>
+<div class="stack-box reveal"><small>DATA / ML</small><div><b>Pandas</b><b>NumPy</b><b>Scikit-learn</b><b>XGBoost</b><b>TensorFlow</b><b>OpenCV</b><b>NLP</b></div></div>
+<div class="stack-box reveal"><small>DATABASE</small><div><b>MySQL</b><b>MongoDB</b><b>JDBC</b><b>Star Schema</b><b>ETL</b><b>Database Queries</b></div></div>
+<div class="stack-box reveal"><small>ANALYTICS</small><div><b>Power BI</b><b>DAX</b><b>Excel</b><b>Data Validation</b><b>Visualization</b><b>Cohort Analysis</b></div></div>
+<div class="stack-box reveal"><small>ENGINEERING</small><div><b>Git</b><b>GitHub</b><b>VS Code</b><b>Jupyter</b><b>Postman</b><b>JIRA</b><b>Render</b></div></div>
+</div><div class="process reveal"><span>IDEA</span><i>→</i><span>ARCHITECT</span><i>→</i><span>BUILD</span><i>→</i><span>TEST</span><i>→</i><span>DEPLOY</span><i>→</i><span>EVOLVE</span></div>
+</section>
+
+<!-- JOURNEY / EDUCATION / CERTS -->
+<section id="journey" class="journey white-world">
+<div class="topline"><span>05 — JOURNEY</span><span>EDUCATION / EXPERIENCE / CREDENTIALS</span></div>
+<div class="journey-head reveal"><h2>THE<br><em>JOURNEY.</em></h2><p>A compact editorial timeline of the education and hands-on experience behind the work.</p></div>
+<div class="timeline editorial-list reveal">
+<article><time>2025 — NOW</time><div><small>WORK</small><h3>CLOUD COMPUTING INTERN</h3><p>Aagaaz Training Centre Pvt. Ltd. · Remote · 4-week program · 88%</p></div><b>01</b></article>
+<article><time>JUN — JUL 2025</time><div><small>WORK</small><h3>SIGNAL & TELECOMMUNICATION INTERN</h3><p>East Central Railway · Danapur Division</p></div><b>02</b></article>
+<article><time>JAN — FEB 2024</time><div><small>WORK</small><h3>ROBOTICS INTERN</h3><p>InfinityCore Technologies (BlinkSkills) · Remote · 92%</p></div><b>03</b></article>
+<article><time>2022 — 2026</time><div><small>EDUCATION</small><h3>B.TECH — COMPUTER SCIENCE & ENGINEERING</h3><p>Shershah Engineering College, Sasaram</p></div><b>04</b></article>
+<article><time>2018 — 2020</time><div><small>EDUCATION</small><h3>INTERMEDIATE — SCIENCE / PCM</h3><p>RB College, Dalsingsaray</p></div><b>05</b></article>
 </div>
-<div class="pipeline reveal"><span>IDEA</span><i>→</i><span>ARCHITECT</span><i>→</i><span>BUILD</span><i>→</i><span>TEST</span><i>→</i><span>DEPLOY</span><i>→</i><span>MEASURE</span><i>→</i><span>EVOLVE</span></div>
+<div class="credentials reveal"><div class="credential-title"><span>CREDENTIAL VAULT</span><h3>CERTIFICATIONS</h3></div><div class="cert-grid"><article><small>AWS</small><b>Data Engineering on AWS: Foundations</b></article><article><small>CISCO</small><b>Data Analytics Essentials</b></article><article><small>CISCO</small><b>Data Science Essentials with Python</b></article><article><small>JPMORGAN CHASE / FORAGE</small><b>Software Engineering Job Simulation</b></article><article><small>DELOITTE / FORAGE</small><b>Data Analytics Job Simulation</b></article><article><small>MASTERCARD / FORAGE</small><b>Cybersecurity Job Simulation</b></article><article><small>NPTEL / IIT KHARAGPUR</small><b>Introduction to IoT</b></article><article><small>SAP</small><b>Analytics Cloud for Planning — Advanced</b></article></div></div>
 </section>
 
-<section id="experience" class="section">
-<div class="section-tag">04 // EXPERIENCE</div><h2 class="reveal">Engineering<br><i>timeline.</i></h2>
-<div class="timeline reveal"><article><time>2025</time><div><b>CLOUD COMPUTING INTERN</b><span>Aagaaz Training Centre Pvt. Ltd. · Remote</span></div></article><article><time>2025</time><div><b>SIGNAL & TELECOMMUNICATION INTERN</b><span>East Central Railway · Danapur Division</span></div></article><article><time>2024</time><div><b>ROBOTICS INTERN</b><span>InfinityCore Technologies · Remote</span></div></article></div>
-</section>
-
-<section id="education" class="section extra-section">
-<div class="section-label">05 // EDUCATION</div>
-<div class="split head"><h2>Academic<br><em>foundation.</em></h2><p>The complete academic layer stays visible and easy to scan.</p></div>
-<div class="edu-list">
-<article><span>2022 — 2026</span><div><small>B.TECH</small><h3>COMPUTER SCIENCE & ENGINEERING</h3><p>Shershah Engineering College, Sasaram</p><b>Bihar Engineering University, Patna</b></div><strong>01</strong></article>
-<article><span>2018 — 2020</span><div><small>INTERMEDIATE</small><h3>SCIENCE — PCM</h3><p>RB College, Dalsingsaray</p></div><strong>02</strong></article>
-</div></section><section id="certifications" class="section extra-section">
-<div class="section-label">06 // CERTIFICATION VAULT</div>
-<div class="split head"><h2>Credentials<br><em>verified.</em></h2><p>Professional certifications and job simulations presented as a compact credential vault.</p></div>
-<div class="cert-list">
-<article><span>AWS</span><b>Data Engineering on AWS: Foundations</b></article>
-<article><span>CISCO</span><b>Data Analytics Essentials</b></article>
-<article><span>CISCO</span><b>Data Science Essentials with Python</b></article>
-<article><span>JPMORGAN CHASE</span><b>Software Engineering Job Simulation</b></article>
-<article><span>DELOITTE</span><b>Data Analytics Job Simulation</b></article>
-<article><span>MASTERCARD</span><b>Cybersecurity Job Simulation</b></article>
-<article><span>NPTEL · IIT KHARAGPUR</span><b>Introduction to IoT</b></article>
-<article><span>SAP</span><b>Analytics Cloud for Planning — Advanced</b></article>
-</div></section><section id="lab" class="section">
-<div class="section-tag">07 // GITHUB LAB</div>
-<div class="two-col reveal"><h2>Open<br><i>work.</i></h2><p class="prose">A live repository vault. Every public repository available on GitHub can appear here automatically, so the portfolio does not become outdated when a new project is published.</p></div>
-<div class="repo-toolbar reveal"><span id="repoStatus">CONNECTING TO GITHUB…</span><a href="https://github.com/priyanshu18611" target="_blank">OPEN PROFILE ↗</a></div>
-<div id="repoGrid" class="repo-grid reveal"></div>
-</section>
-<section id="contact" class="section contact">
-<div class="section-tag">08 // CONTACT CORE</div><div class="contact-box reveal"><h2>Let's build<br><i>something real.</i></h2><p>Open to software engineering, data analytics and full-stack opportunities.</p><div class="contact-links"><a class="magnetic" href="mailto:priyanshu6202018611@gmail.com">EMAIL ↗</a><a class="magnetic" href="https://github.com/priyanshu18611" target="_blank">GITHUB ↗</a><a class="magnetic" href="https://www.linkedin.com/in/priyanshuroy18" target="_blank">LINKEDIN ↗</a><a class="magnetic" href="assets/resume/Priyanshu-Kumar-Resume.pdf" target="_blank">RESUME ↗</a></div></div>
+<!-- CONTACT / FINAL -->
+<section id="contact" class="contact dark-world">
+<div class="contact-top"><span>06 — CONTACT</span><span>LET'S MAKE THE NEXT THING</span></div><div class="contact-main reveal"><div><small>AVAILABLE FOR OPPORTUNITIES</small><h2>READY TO<br><em>BUILD?</em></h2></div><img src="assets/images/priyanshu-original.png" alt="Priyanshu Kumar"></div><div class="contact-grid reveal"><div><span>EMAIL</span><a href="mailto:priyanshu6202018611@gmail.com">priyanshu6202018611@gmail.com</a></div><div><span>PHONE</span><a href="tel:+916202018611">+91 62020 18611</a></div><div><span>GITHUB</span><a href="https://github.com/priyanshu18611" target="_blank">github.com/priyanshu18611</a></div><div><span>LINKEDIN</span><a href="https://www.linkedin.com/in/priyanshuroy18" target="_blank">linkedin.com/in/priyanshuroy18</a></div><div><span>INSTAGRAM</span><a href="https://www.instagram.com/thepriyanshuroy.ofc" target="_blank">@thepriyanshuroy.ofc</a></div><div><span>FACEBOOK</span><a href="https://www.facebook.com/share/18mxswPq2m/" target="_blank">Priyanshu Kumar</a></div></div><footer><span>EK VILLAIN — PRIYANSHU</span><span>BUILD. INNOVATE. EVOLVE.</span><span>© 2026</span></footer>
 </section>
 </main>
-
-<footer><span>EK VILLAIN // PRIYANSHU</span><span>BUILD. INNOVATE. EVOLVE.</span></footer>
-<button id="command" class="command magnetic">⌘ K</button>
-<div id="palette"><div class="palette-box"><input id="commandInput" placeholder="Navigate the experience…"><div id="commandList"></div></div></div>
-<div id="cursor"></div><div id="dot"></div>
-<script src="https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
