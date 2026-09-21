@@ -1,49 +1,47 @@
 # EK VILLAIN — PRIYANSHU
 
-**Software Engineer · Data Analytics · Full Stack Developer**  
-**Build. Innovate. Evolve.**
+> **Build. Innovate. Evolve.**
 
-A cinematic, editorial portfolio for **Priyanshu Kumar**, designed as a sequence of visual scenes rather than a conventional single-page developer template.
+A cinematic editorial portfolio for **Priyanshu Kumar** — Software Engineer, Data Analytics & Full Stack Developer.
 
-## Creative Direction
+## Design Direction
 
-This version uses the supplied visual references as the design basis: cinematic dark presentation, cream editorial spreads, oversized typography, perspective device mockups, project archives and case-study storytelling. The implementation is an original portfolio system rather than a copy of the reference sites.
-
-### Visual rhythm
-
-`BLACK → CREAM → BLACK → CREAM → BLACK → CREAM → BLACK → BLACK`
-
-Each section behaves like a new frame in a digital design magazine.
+This version is deliberately art-directed around the visual language of the three supplied reference videos: cinematic black scenes, cream editorial spreads, oversized typography, device/browser presentation, perspective cards, project archive walls, and case-study storytelling. The references are used as visual direction rather than copied assets.
 
 ## Sections
 
-1. **Opening** — EK VILLAIN hero, device mockup, resume CTA
-2. **Point of View** — profile, disciplines and portfolio metrics
-3. **Archive** — six projects with visual project boards and filters
-4. **Case Study** — CareerPilot AI from problem → engine → output
-5. **Tools of the Trade** — languages, full stack, data/ML, analytics and engineering tools
-6. **The Journey** — education timeline and certifications
-7. **Field Notes** — internships / practical experience
-8. **Final Frame** — contact and social links
+- Cinematic opening / EV identity
+- Point of View / profile
+- Selected Systems archive
+- CareerPilot AI case study
+- Engineering Lab / technology matrix
+- Journey / education timeline
+- Credentials / certifications
+- Field Notes / internships
+- Final contact frame
 
-## Project Universe
+## Featured Work
 
-- CareerPilot AI
-- EcoSentinel
-- Enterprise Sales Analytics
-- Brain Tumor Detection using MRI Images
-- Cricket Score Predictor
-- Spam Mail Detection
+1. CareerPilot AI — AI-powered career intelligence platform
+2. EcoSentinel — IoT wildlife conservation system
+3. Enterprise Sales Analytics — SQL / Python / Power BI / DAX
+4. Brain Tumor Detection — CNN / TensorFlow / OpenCV
+5. Cricket Score Predictor — XGBoost / Scikit-learn
+6. Spam Mail Detection — TF-IDF / Logistic Regression
 
-## Technology
+## Stack
 
-HTML5 · CSS3 · JavaScript · Python · FastAPI · React · Node.js · Express · MongoDB · MySQL · Pandas · NumPy · Scikit-learn · XGBoost · TensorFlow · OpenCV · Power BI · DAX · Excel · Git · GitHub · Postman · JIRA · Render
+Python · Java · C · C++ · JavaScript · SQL · React · Node.js · Express · FastAPI · REST APIs · Socket.io · JWT · MySQL · MongoDB · JDBC · Pandas · NumPy · Scikit-learn · XGBoost · TensorFlow · OpenCV · NLP · Power BI · DAX · Excel · Git · GitHub · VS Code · Jupyter · Postman · JIRA · Render
 
 ## Experience
 
-- Cloud Computing Intern — Aagaaz Training Centre Pvt. Ltd.
-- Signal & Telecommunication Intern — East Central Railway, Danapur Division
-- Robotics Intern — InfinityCore Technologies / BlinkSkills
+- Cloud Computing Intern — Aagaaz Training Centre Pvt. Ltd. — Dec 2025
+- Signal & Telecommunication Intern — East Central Railway, Danapur Division — Jun–Jul 2025
+- Robotics Intern — InfinityCore Technologies / BlinkSkills — Jan–Feb 2024
+
+## Education
+
+B.Tech Computer Science & Engineering — Shershah Engineering College, Sasaram — 2022–2026.
 
 ## Certifications
 
@@ -51,35 +49,24 @@ AWS Data Engineering on AWS: Foundations · Cisco Data Analytics Essentials · C
 
 ## Run locally
 
-No build step is required.
-
-```bash
-git clone <your-repository-url>
-cd <your-repository-folder>
-```
-
-Open `index.html` in a browser, or serve the folder with any static web server.
+Open `index.html` directly, or serve the folder with any static server.
 
 ## Deploy on GitHub Pages
 
-1. Upload the root files and `assets/` folder.
-2. Go to **Settings → Pages**.
-3. Select the repository branch and `/ (root)`.
-4. Save and open the generated Pages URL.
+Upload the project files to the repository root and enable **Settings → Pages → Deploy from branch**.
 
-## Assets
+## Files
 
 ```text
-.
-├── index.html
-├── style.css
-├── script.js
-├── README.md
-└── assets/
-    ├── images/
-    │   └── priyanshu-profile.jpg
-    └── resume/
-        └── Priyanshu-Kumar-Resume.pdf
+index.html
+style.css
+script.js
+README.md
+assets/
+├── images/
+│   └── priyanshu-profile.jpg
+└── resume/
+    └── Priyanshu-Kumar-Resume.pdf
 ```
 
 ## Links
@@ -88,8 +75,3 @@ Open `index.html` in a browser, or serve the folder with any static web server.
 - LinkedIn: https://www.linkedin.com/in/priyanshuroy18
 - Instagram: https://www.instagram.com/thepriyanshuroy.ofc
 - Portfolio: https://priyanshu18611.github.io/ek-villain-priyanshu/
-
----
-
-**EK VILLAIN — PRIYANSHU**  
-Build. Innovate. Evolve.
