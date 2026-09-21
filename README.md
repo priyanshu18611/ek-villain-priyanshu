@@ -1,96 +1,73 @@
 # EK VILLAIN — PRIYANSHU
 
-**Software Engineer · Data Analytics · Full Stack Developer**
+**Software Engineer · Data Analytics · Full Stack Developer**  
+**Build. Innovate. Evolve.**
 
-A cinematic, editorial portfolio for **Priyanshu Kumar**, designed around the visual language of the supplied reference videos: dark product presentation, oversized typography, case-study storytelling, perspective UI cards, restrained crimson accents and alternating black/cream editorial spreads.
+A cinematic, editorial portfolio for **Priyanshu Kumar**, designed as a sequence of visual scenes rather than a conventional single-page developer template.
 
-> **Build. Innovate. Evolve.**
+## Creative Direction
 
-## What this version changes
+This version uses the supplied visual references as the design basis: cinematic dark presentation, cream editorial spreads, oversized typography, perspective device mockups, project archives and case-study storytelling. The implementation is an original portfolio system rather than a copy of the reference sites.
 
-This is a deliberate redesign rather than a simple content refresh. The page is structured like a digital design publication / product case-study:
+### Visual rhythm
 
-- cinematic opening with an original **EK VILLAIN** identity mark
-- perspective laptop-style hero object
-- editorial cream section with profile portrait
-- project **ARCHIVE** with filtering
-- 3D-tilt project cards and animated data visuals
-- dedicated **FROM PROBLEM TO PRODUCT** case studies
-- complete engineering / data / analytics tool matrix
-- education, internships and certification journey
-- contact / social footer
-- grain, reveal, hover, cursor and parallax interactions
-- responsive mobile layout
+`BLACK → CREAM → BLACK → CREAM → BLACK → CREAM → BLACK → BLACK`
 
-## Project universe
+Each section behaves like a new frame in a digital design magazine.
 
-| Project | Area | Technology |
-|---|---|---|
-| CareerPilot AI | Career intelligence / full stack | FastAPI, Python, JavaScript, AI |
-| EcoSentinel | IoT / wildlife conservation | MERN, IoT, Socket.io, JWT |
-| Enterprise Sales Analytics | Data / BI | SQL, Python, Power BI, DAX |
-| Brain Tumor Detection | Computer vision / deep learning | CNN, TensorFlow, OpenCV |
-| Cricket Score Predictor | Machine learning | Python, XGBoost, Scikit-learn |
-| Spam Mail Detection | NLP / ML | Python, TF-IDF, Logistic Regression |
+## Sections
 
-## Verified project metrics used
+1. **Opening** — EK VILLAIN hero, device mockup, resume CTA
+2. **Point of View** — profile, disciplines and portfolio metrics
+3. **Archive** — six projects with visual project boards and filters
+4. **Case Study** — CareerPilot AI from problem → engine → output
+5. **Tools of the Trade** — languages, full stack, data/ML, analytics and engineering tools
+6. **The Journey** — education timeline and certifications
+7. **Field Notes** — internships / practical experience
+8. **Final Frame** — contact and social links
 
-- Brain Tumor Detection: **76% accuracy**, **0.75 weighted F1**.
-- Cricket Score Predictor: **19,000+ records**, **R² 0.85**, **MAE 8.49**.
-- Cloud Computing internship: **88%**.
-- Robotics internship: **92%**.
+## Project Universe
 
-## Stack represented
+- CareerPilot AI
+- EcoSentinel
+- Enterprise Sales Analytics
+- Brain Tumor Detection using MRI Images
+- Cricket Score Predictor
+- Spam Mail Detection
 
-**Languages:** Python, Java, C, C++, JavaScript, SQL, HTML, CSS  
-**Full Stack:** React, Node.js, Express, FastAPI, REST APIs, Socket.io, JWT  
-**Data / ML:** Pandas, NumPy, Scikit-learn, XGBoost, TensorFlow, OpenCV, NLP  
-**Database:** MySQL, MongoDB, JDBC, Star Schema, ETL, Database Queries  
-**Analytics:** Power BI, DAX, Excel, Data Validation, Visualization, Cohort Analysis  
-**Engineering:** Git, GitHub, VS Code, Jupyter, Postman, JIRA, Render
+## Technology
+
+HTML5 · CSS3 · JavaScript · Python · FastAPI · React · Node.js · Express · MongoDB · MySQL · Pandas · NumPy · Scikit-learn · XGBoost · TensorFlow · OpenCV · Power BI · DAX · Excel · Git · GitHub · Postman · JIRA · Render
 
 ## Experience
 
-- **Cloud Computing Intern** — Aagaaz Training Centre Pvt. Ltd. · Remote · Dec 2025
-- **Signal & Telecommunication Intern** — East Central Railway, Danapur Division · Jun–Jul 2025
-- **Robotics Intern** — InfinityCore Technologies (BlinkSkills) · Remote · Jan–Feb 2024
-
-## Education
-
-**B.Tech — Computer Science & Engineering**  
-Shershah Engineering College, Sasaram · 2022–2026
+- Cloud Computing Intern — Aagaaz Training Centre Pvt. Ltd.
+- Signal & Telecommunication Intern — East Central Railway, Danapur Division
+- Robotics Intern — InfinityCore Technologies / BlinkSkills
 
 ## Certifications
 
-- AWS Data Engineering on AWS: Foundations
-- Cisco Data Analytics Essentials
-- Cisco Data Science Essentials with Python
-- JPMorgan Chase Software Engineering Job Simulation — Forage
-- Deloitte Data Analytics Job Simulation — Forage
-- Mastercard Cybersecurity Job Simulation — Forage
-- NPTEL (IIT Kharagpur) — Introduction to IoT
-- SAP Analytics Cloud for Planning — Advanced
+AWS Data Engineering on AWS: Foundations · Cisco Data Analytics Essentials · Cisco Data Science Essentials with Python · JPMorgan Chase Software Engineering Job Simulation · Deloitte Data Analytics Job Simulation · Mastercard Cybersecurity Job Simulation · NPTEL IIT Kharagpur — Introduction to IoT · SAP Analytics Cloud for Planning (Advanced)
 
 ## Run locally
 
-No build system is required.
+No build step is required.
 
 ```bash
 git clone <your-repository-url>
-cd ek-villain-priyanshu
+cd <your-repository-folder>
 ```
 
-Then open `index.html` in a browser, or serve the folder with any static HTTP server.
+Open `index.html` in a browser, or serve the folder with any static web server.
 
-## GitHub Pages
+## Deploy on GitHub Pages
 
-1. Push `index.html`, `style.css`, `script.js` and `assets/` to the repository root.
-2. Open **Settings → Pages**.
-3. Select **Deploy from a branch**.
-4. Choose the `main` branch and `/root` folder.
-5. Save and wait for GitHub Pages to publish.
+1. Upload the root files and `assets/` folder.
+2. Go to **Settings → Pages**.
+3. Select the repository branch and `/ (root)`.
+4. Save and open the generated Pages URL.
 
-## Asset structure
+## Assets
 
 ```text
 .
@@ -98,31 +75,21 @@ Then open `index.html` in a browser, or serve the folder with any static HTTP se
 ├── style.css
 ├── script.js
 ├── README.md
-└── assets
-    ├── images
-    │   ├── priyanshu-original.png
+└── assets/
+    ├── images/
     │   └── priyanshu-profile.jpg
-    └── resume
+    └── resume/
         └── Priyanshu-Kumar-Resume.pdf
 ```
-
-## Design direction
-
-The implementation does **not** copy the supplied videos frame-for-frame. Instead, it translates their visual grammar into an original portfolio system:
-
-**dark hero → editorial profile → archive → case study → tools → journey → contact**
-
-The result keeps the portfolio content readable while using animation and depth as supporting elements rather than hiding the information.
 
 ## Links
 
 - GitHub: https://github.com/priyanshu18611
 - LinkedIn: https://www.linkedin.com/in/priyanshuroy18
 - Instagram: https://www.instagram.com/thepriyanshuroy.ofc
-- Facebook: https://www.facebook.com/share/18mxswPq2m/
-- CareerPilot AI: https://careerpilot-ai-45am.onrender.com/
+- Portfolio: https://priyanshu18611.github.io/ek-villain-priyanshu/
 
 ---
 
 **EK VILLAIN — PRIYANSHU**  
-*Build. Innovate. Evolve.*
+Build. Innovate. Evolve.
