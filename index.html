@@ -1,86 +1,102 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#050505"><meta name="description" content="EK VILLAIN — PRIYANSHU | Software Engineer • Data Analytics • Full Stack Developer">
-<title>EK VILLAIN // DIGITAL REALITY</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050507">
+<meta name="description" content="EK VILLAIN — PRIYANSHU | Software Engineer • Data Analytics • Full Stack Developer">
+<title>EK VILLAIN // PRIYANSHU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="boot"><div class="bootbox"><div class="bootlogo">EV<span>∞</span></div><div id="bootText">INITIALIZING DIGITAL REALITY</div><div class="bootbar"><i></i></div><small>PRIYANSHU // PERSONAL ENGINEERING SYSTEM</small></div></div>
-<canvas id="space"></canvas><div class="grain"></div><div class="vignette"></div>
-<div class="topline"><span id="sys">SYSTEM ONLINE</span><span>EV // 2026</span></div>
-<header>
-<a class="logo magnetic" href="#home"><b>EV</b><span>EK VILLAIN</span><i>// PRIYANSHU</i></a>
-<nav><a href="#about">01 ABOUT</a><a href="#projects">02 PROJECTS</a><a href="#stack">03 STACK</a><a href="#experience">04 EXPERIENCE</a><a href="#contact">05 CONTACT</a></nav>
-<button id="hamb">☰</button>
+<div id="boot" aria-hidden="true"><div class="boot-panel"><div class="boot-mark">EV<span>∞</span></div><div class="boot-line"><i></i></div><div id="boot-msg">CALIBRATING DIGITAL REALITY</div><small>PRIYANSHU // ENGINEERING SYSTEM</small></div></div>
+<canvas id="scene"></canvas>
+<div class="grain"></div><div class="vignette"></div>
+<div class="hud-top"><span>EV.OS <b>ONLINE</b></span><span id="liveClock">--:--:--</span><span>2026 // INDIA</span></div>
+<div class="scroll-progress"><i id="progress"></i></div>
+
+<header class="nav">
+<a href="#home" class="brand magnetic"><strong>EV</strong><span>EK VILLAIN</span><em>// PRIYANSHU</em></a>
+<nav><a href="#about">ABOUT</a><a href="#projects">PROJECTS</a><a href="#stack">STACK</a><a href="#experience">EXPERIENCE</a><a href="#contact">CONTACT</a></nav>
+<button id="menu" aria-label="Open menu">☰</button>
 </header>
-<div id="mobileNav"><a href="#about">ABOUT</a><a href="#projects">PROJECTS</a><a href="#stack">STACK</a><a href="#experience">EXPERIENCE</a><a href="#contact">CONTACT</a></div>
-<div class="progress"><i id="bar"></i></div>
+<div id="mobileMenu"><a href="#about">ABOUT</a><a href="#projects">PROJECTS</a><a href="#stack">STACK</a><a href="#experience">EXPERIENCE</a><a href="#contact">CONTACT</a></div>
 
 <main>
 <section id="home" class="hero">
-<div class="hero-copy">
-<div class="micro"><span>SOFTWARE ENGINEER</span><span>DATA ANALYTICS</span><span>FULL STACK</span></div>
-<h1><small>EK</small><strong>VILLAIN</strong></h1>
-<div class="hero-meta"><b>PRIYANSHU KUMAR</b><span>BUILD. INNOVATE. EVOLVE.</span></div>
-<p>Engineering products across software, data, analytics and intelligent systems.</p>
-<div class="cta"><a class="btn magnetic" href="#projects">ENTER THE UNIVERSE <b>↗</b></a><a class="btn dark magnetic" href="assets/resume/Priyanshu-Kumar-Resume.pdf" target="_blank">RESUME</a></div>
+<div class="hero-grid">
+<div class="hero-copy reveal">
+<div class="eyebrow"><span>SOFTWARE ENGINEER</span><span>DATA ANALYTICS</span><span>FULL STACK</span></div>
+<h1><small>EK</small><b>VILLAIN</b></h1>
+<div class="identity-line"><strong>PRIYANSHU KUMAR</strong><span>BUILD. INNOVATE. EVOLVE.</span></div>
+<p>Engineering practical digital products across software, data, analytics and intelligent systems.</p>
+<div class="hero-actions"><a href="#projects" class="button magnetic">ENTER EXPERIENCE <span>↗</span></a><a href="assets/resume/Priyanshu-Kumar-Resume.pdf" target="_blank" class="button secondary magnetic">VIEW RESUME</a></div>
 </div>
-<div class="core3d"><div class="ring a"></div><div class="ring b"></div><div class="ring c"></div><div class="core">EV<small>CORE</small></div></div>
-<div class="hero-readout"><span>SCROLL / EXPLORE</span><span id="clock">--:--:--</span><span>01 / 05</span></div>
+
+<div class="portrait-stage reveal">
+<div class="portrait-halo"></div><div class="portrait-grid"></div>
+<div class="portrait-card" id="portraitCard">
+<div class="portrait-image"><img src="assets/images/priyanshu-profile.jpg" alt="Priyanshu Kumar"></div>
+<div class="portrait-overlay"></div>
+<div class="portrait-caption"><span>IDENTITY VERIFIED</span><b>PRIYANSHU</b><small>SOFTWARE ENGINEER</small></div>
+<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+</div>
+<div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div>
+</div>
+</div>
+<div class="hero-footer"><span>SCROLL TO EXPLORE</span><span>01 / 05</span><span>HIGH-PERFORMANCE MODE</span></div>
 </section>
 
-<section id="about" class="section about">
-<div class="label">01 // IDENTITY</div>
-<div class="split"><div><h2>Not a page.<br><em>A digital identity.</em></h2></div>
-<div class="copy"><p>Priyanshu Kumar — CSE graduate focused on software engineering, data analytics and full-stack development. This experience is designed to make the engineering work discoverable without sacrificing clarity.</p>
-<div class="profile"><img src="assets/images/priyanshu-profile.png" alt="Priyanshu Kumar"><div><small>IDENTITY VERIFIED</small><b>PRIYANSHU KUMAR</b><span>SOFTWARE ENGINEER</span></div></div></div></div>
-<div class="statline"><div><b>06+</b><span>FEATURED SYSTEMS</span></div><div><b>03</b><span>INTERNSHIPS</span></div><div><b>08+</b><span>CORE TECHNOLOGIES</span></div><div><b>01</b><span>ENGINEERING MINDSET</span></div></div>
+<section id="about" class="section">
+<div class="section-tag">01 // IDENTITY</div>
+<div class="two-col reveal"><h2>Build with<br><i>purpose.</i></h2><div class="prose"><p>I’m Priyanshu Kumar, a CSE graduate focused on software engineering, data analytics and full-stack development. This portfolio turns the work into an interactive, high-performance digital experience.</p><div class="metrics"><div><b>06+</b><small>FEATURED PROJECTS</small></div><div><b>03</b><small>INTERNSHIPS</small></div><div><b>08+</b><small>CORE SKILLS</small></div></div></div></div>
 </section>
 
-<section id="projects" class="section projects">
-<div class="label">02 // PROJECT CONSTELLATION</div>
-<div class="split head"><h2>Explore the<br><em>systems.</em></h2><p>Tap a node or drag the constellation. Every node opens a focused engineering view.</p></div>
-<div id="constellation">
-<div class="const-lines"></div><div class="const-core">EV<small>PROJECT<br>CORE</small></div>
-<button class="node n1" data-key="CareerPilot AI"><small>01</small><b>CAREERPILOT</b><i>AI / FULL STACK</i></button>
-<button class="node n2" data-key="EcoSentinel"><small>02</small><b>ECOSENTINEL</b><i>IOT / MERN</i></button>
-<button class="node n3" data-key="Enterprise Sales Analytics"><small>03</small><b>SALES ANALYTICS</b><i>SQL / POWER BI</i></button>
-<button class="node n4" data-key="Brain Tumor Detection"><small>04</small><b>BRAIN TUMOR</b><i>CNN / TENSORFLOW</i></button>
-<button class="node n5" data-key="Cricket Score Predictor"><small>05</small><b>CRICKET</b><i>XGBOOST / PYTHON</i></button>
-<button class="node n6" data-key="Spam Mail Detection"><small>06</small><b>SPAM DETECTION</b><i>ML / NLP</i></button>
+<section id="projects" class="section project-section">
+<div class="section-tag">02 // PROJECT LAB</div>
+<div class="two-col reveal"><h2>Systems<br><i>in motion.</i></h2><p class="prose">Interactive cards use depth, spotlight and motion while keeping the actual engineering information one click away.</p></div>
+<div class="project-grid">
+<article class="project-card magnetic-card" data-project="CareerPilot AI"><span>01</span><div class="project-icon">AI</div><h3>CAREERPILOT AI</h3><p>AI-powered career intelligence, resume analysis and ATS optimization.</p><div class="tags">PYTHON · FASTAPI · AI</div><a href="https://github.com/priyanshu18611/careerpilot-ai" target="_blank">GITHUB ↗</a></article>
+<article class="project-card magnetic-card" data-project="EcoSentinel"><span>02</span><div class="project-icon">IO</div><h3>ECOSENTINEL</h3><p>IoT wildlife-conservation platform with real-time alerts.</p><div class="tags">MERN · IOT · SOCKET.IO</div><a href="https://github.com/priyanshu18611/EcoSentinel" target="_blank">GITHUB ↗</a></article>
+<article class="project-card magnetic-card" data-project="Sales Analytics"><span>03</span><div class="project-icon">SQL</div><h3>SALES ANALYTICS</h3><p>Enterprise sales intelligence using SQL, Python and Power BI.</p><div class="tags">SQL · DAX · POWER BI</div><a href="https://github.com/priyanshu18611" target="_blank">GITHUB ↗</a></article>
+<article class="project-card magnetic-card" data-project="Brain Tumor Detection"><span>04</span><div class="project-icon">ML</div><h3>BRAIN TUMOR</h3><p>MRI image classification with CNN and computer vision.</p><div class="tags">CNN · TENSORFLOW · OPENCV</div><a href="https://github.com/priyanshu18611/brain-tumor-detection" target="_blank">GITHUB ↗</a></article>
+<article class="project-card magnetic-card" data-project="Cricket Score Predictor"><span>05</span><div class="project-icon">XP</div><h3>CRICKET PREDICTOR</h3><p>Machine-learning score prediction workflow.</p><div class="tags">PYTHON · XGBOOST</div><a href="https://github.com/priyanshu18611/Cricket-Score-Predictor" target="_blank">GITHUB ↗</a></article>
+<article class="project-card magnetic-card" data-project="Spam Mail Detection"><span>06</span><div class="project-icon">NLP</div><h3>SPAM DETECTION</h3><p>Text classification workflow using ML and NLP features.</p><div class="tags">NLP · TF-IDF · ML</div><a href="https://github.com/priyanshu18611/Spam-Mail-Detection" target="_blank">GITHUB ↗</a></article>
 </div>
-<div id="drawer"><button id="close">×</button><small id="dtag">SYSTEM</small><h3 id="dtitle">SELECT A NODE</h3><p id="dtext">Choose a project from the constellation.</p><div id="dtech"></div><a id="dlink" target="_blank">OPEN GITHUB ↗</a></div>
 </section>
 
 <section id="stack" class="section">
-<div class="label">03 // ENGINEERING MATRIX</div><div class="split head"><h2>Technology<br><em>ecosystem.</em></h2><p>Move through the matrix to reveal the engineering domains.</p></div>
-<div class="matrix">
-<div class="skill"><span>PYTHON</span><b>SOFTWARE · ML · DATA</b><i>01</i></div><div class="skill"><span>JAVASCRIPT</span><b>WEB · UI · INTERACTION</b><i>02</i></div>
-<div class="skill"><span>SQL</span><b>DATABASE · ANALYTICS</b><i>03</i></div><div class="skill"><span>REACT / NODE</span><b>FULL STACK</b><i>04</i></div>
-<div class="skill"><span>POWER BI</span><b>DAX · VISUALIZATION</b><i>05</i></div><div class="skill"><span>GIT / GITHUB</span><b>VERSION CONTROL</b><i>06</i></div>
+<div class="section-tag">03 // ENGINEERING CORE</div>
+<div class="two-col reveal"><h2>Technology<br><i>arsenal.</i></h2><p class="prose">A focused stack for building, analyzing, testing and shipping practical systems.</p></div>
+<div class="skill-grid">
+<div class="skill-card"><b>PYTHON</b><span>SOFTWARE · ML · DATA</span><i>01</i></div>
+<div class="skill-card"><b>JAVASCRIPT</b><span>WEB · UI · INTERACTION</span><i>02</i></div>
+<div class="skill-card"><b>SQL</b><span>DATABASE · ANALYTICS</span><i>03</i></div>
+<div class="skill-card"><b>REACT / NODE</b><span>FULL STACK</span><i>04</i></div>
+<div class="skill-card"><b>POWER BI</b><span>DAX · VISUALIZATION</span><i>05</i></div>
+<div class="skill-card"><b>GIT / GITHUB</b><span>VERSION CONTROL</span><i>06</i></div>
 </div>
-<div class="flow"><span>IDEA</span><i>→</i><span>BUILD</span><i>→</i><span>TEST</span><i>→</i><span>DEPLOY</span><i>→</i><span>EVOLVE</span></div>
+<div class="pipeline"><span>IDEA</span><i>→</i><span>BUILD</span><i>→</i><span>TEST</span><i>→</i><span>DEPLOY</span><i>→</i><span>EVOLVE</span></div>
 </section>
 
-<section id="experience" class="section experience">
-<div class="label">04 // EXPERIENCE</div><h2>Engineering<br><em>timeline.</em></h2>
-<div class="timeline"><article><time>2025</time><div><b>CLOUD COMPUTING INTERN</b><span>Aagaaz Training Centre Pvt. Ltd. · Remote</span></div></article>
-<article><time>2025</time><div><b>SIGNAL & TELECOMMUNICATION INTERN</b><span>East Central Railway · Danapur Division</span></div></article>
-<article><time>2024</time><div><b>ROBOTICS INTERN</b><span>InfinityCore Technologies · Remote</span></div></article></div>
+<section id="experience" class="section">
+<div class="section-tag">04 // EXPERIENCE</div><h2 class="reveal">Engineering<br><i>timeline.</i></h2>
+<div class="timeline reveal"><article><time>2025</time><div><b>CLOUD COMPUTING INTERN</b><span>Aagaaz Training Centre Pvt. Ltd. · Remote</span></div></article><article><time>2025</time><div><b>SIGNAL & TELECOMMUNICATION INTERN</b><span>East Central Railway · Danapur Division</span></div></article><article><time>2024</time><div><b>ROBOTICS INTERN</b><span>InfinityCore Technologies · Remote</span></div></article></div>
 </section>
 
 <section id="contact" class="section contact">
-<div class="label">05 // CONTACT CORE</div><h2>Build something<br><em>real.</em></h2><p>Open to software engineering, data analytics and full-stack opportunities.</p>
-<div class="links"><a class="magnetic" href="mailto:priyanshu6202018611@gmail.com">EMAIL ↗</a><a class="magnetic" href="https://github.com/priyanshu18611" target="_blank">GITHUB ↗</a><a class="magnetic" href="https://www.linkedin.com/in/priyanshuroy18" target="_blank">LINKEDIN ↗</a><a class="magnetic" href="assets/resume/Priyanshu-Kumar-Resume.pdf" target="_blank">RESUME ↗</a></div>
+<div class="section-tag">05 // CONTACT CORE</div><div class="contact-box reveal"><h2>Let's build<br><i>something real.</i></h2><p>Open to software engineering, data analytics and full-stack opportunities.</p><div class="contact-links"><a class="magnetic" href="mailto:priyanshu6202018611@gmail.com">EMAIL ↗</a><a class="magnetic" href="https://github.com/priyanshu18611" target="_blank">GITHUB ↗</a><a class="magnetic" href="https://www.linkedin.com/in/priyanshuroy18" target="_blank">LINKEDIN ↗</a><a class="magnetic" href="assets/resume/Priyanshu-Kumar-Resume.pdf" target="_blank">RESUME ↗</a></div></div>
 </section>
 </main>
-<footer><span>EK VILLAIN // PRIYANSHU</span><span>BUILD. INNOVATE. EVOLVE.</span></footer>
 
-<button id="cmd" class="cmd">⌘ K</button><div id="palette"><div class="palbox"><input id="search" placeholder="Navigate the system…"><div id="results"></div></div></div>
+<footer><span>EK VILLAIN // PRIYANSHU</span><span>BUILD. INNOVATE. EVOLVE.</span></footer>
+<button id="command" class="command magnetic">⌘ K</button>
+<div id="palette"><div class="palette-box"><input id="commandInput" placeholder="Navigate the experience…"><div id="commandList"></div></div></div>
 <div id="cursor"></div><div id="dot"></div>
-<script src="https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.min.js"></script><script src="script.js"></script>
-</body></html>
+<script src="https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,25 +1,28 @@
-# EK VILLAIN // DIGITAL REALITY X
+# EK VILLAIN // PRIME X
 
-An experimental, recruiter-friendly interactive developer portfolio.
+High-performance cinematic developer portfolio.
 
-## Highlights
-- Three.js adaptive ambient universe
-- Interactive project constellation
-- Project engineering drawer with GitHub links
+### Highlights
+- Three.js adaptive 3D particle field
+- High-quality focused profile portrait asset
+- Interactive 3D portrait tilt
+- Magnetic buttons and project cards
 - Cinematic boot sequence
-- Magnetic UI + custom cursor
+- Scroll reveal system
 - Command palette (Ctrl/Cmd + K)
-- Responsive mobile navigation
-- Adaptive particle count and pixel ratio
-- Reduced-motion accessibility support
+- Responsive desktop + mobile layouts
+- Device-aware particle density / DPR
+- Reduced-motion accessibility
 - GitHub Pages compatible
 
-## Structure
+### Important
+Keep `assets/` intact. Replace only the four root files in an existing repository if deploying over the current portfolio.
+
+### Structure
 index.html
 style.css
 script.js
-assets/images/priyanshu-profile.png
+README.md
+assets/images/priyanshu-profile.jpg
+assets/images/priyanshu-original.png
 assets/resume/Priyanshu-Kumar-Resume.pdf
-
-## Deploy
-Replace the four root files in the existing repository and keep the existing `assets/` folder. Enable GitHub Pages from `main` / root.
