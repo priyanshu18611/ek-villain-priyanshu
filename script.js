@@ -16,3 +16,24 @@ if(window.THREE){const canvas=$("#scene"),scene=new THREE.Scene(),camera=new THR
 const count=mobile?500:1100,arr=new Float32Array(count*3);for(let i=0;i<count;i++){const a=Math.random()*Math.PI*2,r=THREE.MathUtils.randFloat(2.5,10);arr[i*3]=Math.cos(a)*r;arr[i*3+1]=Math.sin(a)*r;arr[i*3+2]=(Math.random()-.5)*8}const geo=new THREE.BufferGeometry();geo.setAttribute("position",new THREE.BufferAttribute(arr,3));const mat=new THREE.PointsMaterial({color:0xffffff,size:mobile?.022:.028,transparent:true,opacity:.5});const stars=new THREE.Points(geo,mat);scene.add(stars);
 const torus=new THREE.Mesh(new THREE.TorusGeometry(2.1,.006,8,160),new THREE.MeshBasicMaterial({color:0x9a9a9a,transparent:true,opacity:.2}));scene.add(torus);
 let tx=0,ty=0,mx=0,my=0;addEventListener("pointermove",e=>{tx=(e.clientX/innerWidth-.5)*.7;ty=(e.clientY/innerHeight-.5)*.45});function animate(t){mx+=(tx-mx)*.02;my+=(ty-my)*.02;stars.rotation.y=t*.00002+mx;stars.rotation.x=t*.000012+my;torus.rotation.x=t*.00008+my;torus.rotation.y=t*.00012+mx;camera.position.x=mx*.35;camera.position.y=-my*.2;camera.lookAt(0,0,0);renderer.render(scene,camera);requestAnimationFrame(animate)}requestAnimationFrame(animate);addEventListener("resize",()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setPixelRatio(Math.min(devicePixelRatio,innerWidth<800?1.15:1.6));renderer.setSize(innerWidth,innerHeight)})}
+
+// Live GitHub repository vault — all public repositories, newest first.
+(async function(){
+ const grid=document.getElementById("repoGrid"), status=document.getElementById("repoStatus");
+ if(!grid) return;
+ try{
+   const r=await fetch("https://api.github.com/users/priyanshu18611/repos?per_page=100&sort=updated");
+   if(!r.ok) throw new Error("GitHub API unavailable");
+   const repos=await r.json();
+   status.textContent=`${repos.length} PUBLIC REPOSITORIES // LIVE`;
+   grid.innerHTML=repos.map(repo=>`
+    <article class="repo-card">
+      <div><small>${(repo.language||"CODE").toUpperCase()}</small><b>${repo.name.replaceAll("-"," ")}</b>
+      <p>${(repo.description||"Public engineering repository.").slice(0,120)}</p></div>
+      <footer><span>★ ${repo.stargazers_count}</span><a href="${repo.html_url}" target="_blank">OPEN ↗</a></footer>
+    </article>`).join("");
+ }catch(e){
+   status.textContent="GITHUB LIVE FEED UNAVAILABLE";
+   grid.innerHTML='<article class="repo-card"><div><small>GITHUB</small><b>OPEN REPOSITORY VAULT</b><p>Browse every public project directly on GitHub.</p></div><footer><a href="https://github.com/priyanshu18611" target="_blank">OPEN PROFILE ↗</a></footer></article>';
+ }
+})();

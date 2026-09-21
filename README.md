@@ -28,3 +28,8 @@ assets/images/priyanshu-original.png
 assets/resume/Priyanshu-Kumar-Resume.pdf
 
 Complete content: Education + Certifications + Experience + Projects + Skills + Resume + Socials.
+
+
+## ULTIMATE EDITION
+This edition blends the visual language of the supplied references: cinematic dark 3D presentation, editorial case-study cards, perspective interfaces, clean professional information hierarchy, and a live GitHub repository vault.
+It keeps the complete profile content: projects, skills/tools, internships, education, certifications, resume and social/contact links.
