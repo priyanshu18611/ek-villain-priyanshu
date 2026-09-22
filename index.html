@@ -13,11 +13,21 @@
 
 <!-- PRELOADER -->
 <div class="preloader" id="preloader">
-  <div class="preloader-inner">
+  <div class="preloader-inner" id="preloaderInner">
     <div class="preloader-mark">EV</div>
     <div class="preloader-bar"><span id="preloaderFill"></span></div>
     <div class="preloader-count" id="preloaderCount">00</div>
     <div class="preloader-label mono">LOADING ARCHIVE</div>
+  </div>
+  <div class="film-leader" id="filmLeader">
+    <svg viewBox="0 0 200 200" class="film-circle">
+      <circle cx="100" cy="100" r="92" class="film-circle-track"/>
+      <circle cx="100" cy="100" r="92" class="film-circle-fill" id="filmCircleFill"/>
+      <line x1="100" y1="8" x2="100" y2="192" class="film-cross"/>
+      <line x1="8" y1="100" x2="192" y2="100" class="film-cross"/>
+    </svg>
+    <div class="film-number" id="filmNumber">5</div>
+    <div class="film-caption mono">EK VILLAIN PRODUCTIONS PRESENTS</div>
   </div>
 </div>
 
@@ -45,6 +55,7 @@
 <main>
 
 <section id="home" class="scene scene-black hero">
+<canvas id="heroCanvas" class="hero-canvas"></canvas>
 <div class="scene-no">SCENE 01 / 09</div>
 <div class="hero-top mono"><span>SOFTWARE ENGINEER · DATA ANALYTICS · FULL STACK DEVELOPER</span><span>PORTFOLIO / 2026</span></div>
 
@@ -60,7 +71,7 @@
 <div class="hero-main">
 <div class="hero-title">
   <p class="overline reveal-line">BUILD. INNOVATE. EVOLVE.</p>
-  <h1 class="split-title"><span class="line">EK</span><br><em class="line glitch-target" data-text="VILLAIN">VILLAIN</em><small class="line">PRIYANSHU</small></h1>
+  <h1 class="split-title"><span class="line">EK</span><br><em class="line scramble-target" id="scrambleWord" data-final="VILLAIN">VILLAIN</em><small class="line">PRIYANSHU</small></h1>
   <p class="hero-sub reveal-line" id="lensTagline">I build digital products, analytical systems and intelligent interfaces where engineering meets visual storytelling.</p>
   <div class="hero-buttons">
     <a class="button-red magnetic" href="#archive"><span>ENTER ARCHIVE</span> <b>↗</b></a>
@@ -116,6 +127,8 @@
 <div class="scene-no">SCENE 03 / 09</div><div class="eyebrow mono">02 / SELECTED WORK</div>
 <div class="archive-head"><h2 class="reveal-up">ARCHIVE</h2><p>Six systems. Different problems.<br>One engineering point of view.</p></div>
 <div class="archive-tools mono"><button class="active" data-filter="all">ALL</button><button data-filter="ai">AI / ML</button><button data-filter="data">DATA / BI</button><button data-filter="full">FULL STACK</button></div>
+<div class="archive-hint mono">DRAG THIS SCROLL DOWN TO MOVE THROUGH THE ARCHIVE →</div>
+<div class="archive-scroller" id="archiveScroller">
 <div class="archive-grid" id="archiveGrid">
 
 <article class="work-card work-wide" data-cat="ai full" data-modal-title="CareerPilot AI" data-modal-code="CP / 001" data-modal-tag="01 / AI · FULL STACK" data-modal-desc="AI-powered career intelligence platform for resume analysis, ATS optimization, job matching and coaching. Turns fragmented resume signals into one continuous guided journey — from parsing a resume to producing a concrete action plan." data-modal-stack="Python,FastAPI,JavaScript,AI" data-modal-link="https://careerpilot-ai-45am.onrender.com/">
@@ -148,6 +161,7 @@
   <div class="work-copy"><span class="mono">06 / NLP</span><h3>Spam Mail Detection</h3><p>Text classification pipeline using TF-IDF features and Logistic Regression.</p><div class="tags"><i>Python</i><i>NLP</i><i>ML</i></div></div>
 </article>
 
+</div>
 </div>
 </section>
 

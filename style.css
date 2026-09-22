@@ -586,3 +586,74 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 #resumeFrame{flex:1;width:100%;border:0;background:#fff;}
 .resume-download{margin:14px auto 16px;}
 
+/* ============================================================
+   ADVANCED FEATURE SET 3 — cinematic "wow" layer
+   ============================================================ */
+
+/* ---- film countdown leader ---- */
+.preloader-inner{transition:opacity .3s ease;}
+.preloader-inner.hide{opacity:0;pointer-events:none;}
+.film-leader{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;
+}
+.film-leader.show{opacity:1;}
+.film-circle{width:min(220px,42vw);height:min(220px,42vw);position:relative;}
+.film-circle-track{fill:none;stroke:rgba(255,255,255,.12);stroke-width:2;}
+.film-circle-fill{
+  fill:none;stroke:var(--red);stroke-width:2;stroke-dasharray:578;stroke-dashoffset:578;
+  transform:rotate(-90deg);transform-origin:100px 100px;
+}
+.film-cross{stroke:rgba(255,255,255,.18);stroke-width:1;}
+.film-number{
+  position:absolute;font-family:var(--font-serif);font-style:italic;font-size:64px;color:var(--cream);
+  top:50%;left:50%;transform:translate(-50%,-58%);
+}
+.film-caption{position:absolute;bottom:18%;font-size:9px;letter-spacing:.3em;color:var(--muted-dark);}
+@keyframes filmNumberPop{0%{transform:translate(-50%,-58%) scale(1.5);opacity:0;}30%{opacity:1;}100%{transform:translate(-50%,-58%) scale(1);opacity:1;}}
+.film-number.pop{animation:filmNumberPop .5s var(--ease);}
+
+/* ---- hero particle network canvas ---- */
+.hero-canvas{
+  position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.55;pointer-events:none;
+}
+.hero .scene-no, .hero .hero-top, .hero .lens-switcher, .hero .hero-main, .hero .hero-foot{position:relative;z-index:1;}
+
+/* ---- text scramble ---- */
+.scramble-target{display:inline-block;}
+
+/* ---- archive horizontal cinema scroll ---- */
+.archive-hint{font-size:9px;opacity:.4;text-align:right;margin-bottom:16px;letter-spacing:.1em;}
+.archive-scroller{position:relative;}
+@media (min-width:901px){
+  .archive-scroller{overflow:hidden;}
+  .archive-grid{
+    display:flex;flex-wrap:nowrap;gap:20px;width:max-content;padding-bottom:6px;
+  }
+  .archive-grid .work-card{width:400px;flex:0 0 400px;}
+  .archive-grid .work-wide{width:820px;flex:0 0 820px;}
+}
+@media (max-width:900px){ .archive-hint{display:none;} }
+
+/* ---- villain mode glitch transition (upgrades the simple flash) ---- */
+body.glitching{animation:none;}
+body.glitching::after{
+  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;
+  background:
+    repeating-linear-gradient(0deg,rgba(255,0,60,.08) 0 1px,transparent 1px 3px);
+  animation:scanlineJitter .5s steps(2) 1;
+}
+@keyframes scanlineJitter{
+  0%{transform:translateY(0);}20%{transform:translateY(-6px) translateX(4px);}
+  40%{transform:translateY(4px) translateX(-6px);}60%{transform:translateY(-3px);}
+  80%{transform:translateY(2px) translateX(2px);}100%{transform:translateY(0) translateX(0);}
+}
+.glitch-slice{
+  position:fixed;left:0;right:0;z-index:9999;pointer-events:none;
+  background:var(--black);mix-blend-mode:difference;
+}
+
+/* ---- scroll-scrubbed hero parallax targets ---- */
+.hero-device-wrap, .hero-title{will-change:transform;}
+
+

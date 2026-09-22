@@ -77,6 +77,34 @@ touch devices, and the layout is fully responsive down to mobile.
     still opens the PDF directly, since in-page PDF viewers are unreliable
     on small screens), with an "Open full PDF" fallback inside the modal.
 
+## Round 3 — the "wow" layer (cinematic engine)
+21. **Film countdown leader intro** — after the loading bar finishes, a real
+    5‑4‑3‑2‑1 film-leader countdown plays (circular wipe + numbers), like a
+    movie reel starting, before the hero reveals. Skipped instantly for
+    `prefers-reduced-motion`.
+22. **Interactive particle network in the hero** — a lightweight canvas
+    (no libraries) draws a constellation of red nodes behind the hero copy;
+    particles drift and connect with lines, and gently part around the
+    cursor. Pauses automatically when the hero scrolls out of view.
+23. **Text-scramble decode on "VILLAIN"** — the headline resolves out of
+    scrambled characters (Matrix/decoder style) the moment it appears,
+    timed into the existing intro sequence.
+24. **Cinematic horizontal scroll through the Archive** (desktop) — the
+    Archive section pins in place and the project cards scroll *sideways*
+    as you scroll down, like a gallery reel; automatically recalculates
+    when you change filters. On tablet/mobile it gracefully falls back to
+    the normal vertical grid — no scroll-jacking on small screens.
+25. **Scroll-scrubbed hero parallax** — as you start scrolling past the
+    hero, the device mockup and headline pull back and fade in sync with
+    scroll position (not just time), like a camera pulling away.
+26. **Real glitch transition for Villain Mode** — toggling it now fires a
+    genuine screen-tear burst (scanline jitter + torn slice bars) for a
+    third of a second, on top of the red flash — not just a color swap.
+
+All six respect `prefers-reduced-motion` (skipped or shortened), the canvas
+pauses off-screen, and the horizontal pin only engages above 900px so
+nothing fights the scroll on phones.
+
 ## Notes
 - Animations use GSAP + ScrollTrigger loaded from cdnjs (no build step, no
   npm install — works exactly like your current plain HTML/CSS/JS setup).
