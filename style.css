@@ -301,6 +301,11 @@ em,i{font-style:italic;}
 .spam-visual .mail{position:absolute;top:44px;left:16px;font-family:var(--font-mono);font-size:20px;border:2px dashed var(--line-dark);padding:10px 16px;border-radius:6px;}
 .spam-visual small{position:absolute;bottom:20px;left:16px;font-family:var(--font-mono);font-size:8px;opacity:.6;}
 .cross{position:absolute;top:10px;right:16px;font-size:30px;color:var(--red);}
+.resume-visual .doc-icon{position:absolute;top:40px;left:16px;font-family:var(--font-mono);font-size:13px;border:2px solid var(--line-dark);border-radius:4px;padding:10px 14px;letter-spacing:.1em;}
+.resume-visual small{position:absolute;bottom:20px;left:16px;font-family:var(--font-mono);font-size:8px;opacity:.6;}
+.parse-line{position:absolute;top:0;left:0;right:0;height:2px;background:var(--red);animation:scanMove 2.2s linear infinite;opacity:.6;}
+.kisan-visual .kisan-icon{position:absolute;top:34px;left:16px;font-size:30px;}
+.kisan-visual small{position:absolute;bottom:20px;left:16px;font-family:var(--font-mono);font-size:8px;opacity:.6;max-width:80%;line-height:1.5;}
 
 /* ---------------- case study ---------------- */
 .case-title{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:60px;}
@@ -568,6 +573,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .gh-stat:last-child{border-right:0;}
 .gh-stat b{display:block;font-family:var(--font-serif);font-size:26px;color:var(--red);}
 .gh-stat span{font-family:var(--font-mono);font-size:9px;opacity:.55;}
+.gh-recent{border-top:1px solid var(--line-dark);padding:14px 18px;font-size:10px;opacity:.7;}
+.gh-recent-label{opacity:.5;}
+.gh-recent-item{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.06);}
+.gh-recent-item:last-child{border-bottom:0;}
+.gh-recent-item a{color:var(--cream);}
+.gh-recent-item a:hover{color:var(--red);}
+.gh-recent-item small{opacity:.45;white-space:nowrap;}
 
 /* ---- resume quick view ---- */
 .resume-overlay{
@@ -655,5 +667,16 @@ body.glitching::after{
 
 /* ---- scroll-scrubbed hero parallax targets ---- */
 .hero-device-wrap, .hero-title{will-change:transform;}
+
+/* ---- battery / CPU optimization: pause decorative animation when tab is hidden ---- */
+body.tab-hidden .tool-marquee,
+body.tab-hidden .orb,
+body.tab-hidden .scroll-arrow,
+body.tab-hidden .pulse,
+body.tab-hidden .scan,
+body.tab-hidden .signal,
+body.tab-hidden.villain-mode{
+  animation-play-state:paused !important;
+}
 
 

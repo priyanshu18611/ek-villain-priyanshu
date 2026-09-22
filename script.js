@@ -150,7 +150,7 @@ function setupHeroParticles(){
 
   function step(){
     requestAnimationFrame(step);
-    if (!visible) return;
+    if (!visible || document.hidden) return;
     ctx.clearRect(0,0,w,h);
     for (var i=0;i<particles.length;i++){
       var p = particles[i];
@@ -299,6 +299,28 @@ function setChapter(i, name){
   var nm = document.getElementById("chapterName");
   if (no) no.textContent = String(i).padStart(2,"0");
   if (nm) nm.textContent = name;
+  document.title = "EK VILLAIN — " + name + " · Priyanshu";
+}
+
+/* ---------- favicon-as-canvas (swaps on Villain Mode) ---------- */
+function setFavicon(emoji){
+  var canvas = document.createElement("canvas");
+  canvas.width = 64; canvas.height = 64;
+  var ctx = canvas.getContext("2d");
+  ctx.font = "54px serif";
+  ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  ctx.fillText(emoji, 32, 38);
+  var link = document.querySelector("link[rel='icon']") || document.createElement("link");
+  link.rel = "icon";
+  link.href = canvas.toDataURL("image/png");
+  if (!link.parentNode) document.head.appendChild(link);
+}
+
+/* ---------- page-visibility aware animation pausing (battery / CPU optimization) ---------- */
+function setupVisibilityOptimization(){
+  document.addEventListener("visibilitychange", function(){
+    document.body.classList.toggle("tab-hidden", document.hidden);
+  });
 }
 
 /* ---------- 3. CUSTOM MAGNETIC CURSOR ---------- */
@@ -458,9 +480,11 @@ function setupVillainMode(){
 
   function activate(){
     document.body.classList.toggle("villain-mode");
+    var isVillain = document.body.classList.contains("villain-mode");
     flash.classList.remove("hit"); void flash.offsetWidth; flash.classList.add("hit");
     triggerGlitchBurst();
-    showToast(document.body.classList.contains("villain-mode") ? "VILLAIN MODE ENGAGED" : "VILLAIN MODE OFF");
+    setFavicon(isVillain ? "😈" : "🅴");
+    showToast(isVillain ? "VILLAIN MODE ENGAGED" : "VILLAIN MODE OFF");
   }
 
   if (toggle) toggle.addEventListener("click", activate);
@@ -659,7 +683,7 @@ function escapeHtml(s){
   return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 }
 
-/* ---------- BI dashboard (Power BI / Tableau style demo) ---------- */
+/* ---------- BI dashboard (Power BI / Tableau style demo) — lazy-loaded ---------- */
 var DASH_DATA = {
   all:   {revenue:482000, deals:186, avg:2591, top:"Software", deltaRev:14, deltaDeals:9,  deltaAvg:4,
           quarters:[92,108,121,161], categories:[["Software",42],["Services",26],["Hardware",18],["Support",14]]},
@@ -672,38 +696,57 @@ var DASH_DATA = {
   west:  {revenue:117000, deals:43,  avg:2721, top:"Hardware", deltaRev:15, deltaDeals:10, deltaAvg:4,
           quarters:[20,26,29,42], categories:[["Software",36],["Services",22],["Hardware",28],["Support",14]]}
 };
-var barChart, donutChart;
-function setupDashboard(){
-  var select = document.getElementById("dashRegion");
+var barChart, donutChart, chartJsLoading = false, chartJsReady = false;
+
+function loadChartJs(callback){
+  if (chartJsReady){ callback(); return; }
+  if (chartJsLoading){ document.addEventListener("chartjs-ready", callback, {once:true}); return; }
+  chartJsLoading = true;
+  var s = document.createElement("script");
+  s.src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js";
+  s.onload = function(){ chartJsReady = true; document.dispatchEvent(new Event("chartjs-ready")); callback(); };
+  document.head.appendChild(s);
+}
+
+function renderDashboard(region){
+  var d = DASH_DATA[region];
+  document.getElementById("kpiRevenue").textContent = "$" + d.revenue.toLocaleString();
+  document.getElementById("kpiDeals").textContent = d.deals;
+  document.getElementById("kpiAvg").textContent = "$" + d.avg.toLocaleString();
+  document.getElementById("kpiTop").textContent = d.top;
+  document.getElementById("kpiRevenueDelta").textContent = "+" + d.deltaRev + "% QoQ";
+  document.getElementById("kpiDealsDelta").textContent = "+" + d.deltaDeals + "% QoQ";
+  document.getElementById("kpiAvgDelta").textContent = "+" + d.deltaAvg + "% QoQ";
+
   var barCanvas = document.getElementById("chartBar");
   var donutCanvas = document.getElementById("chartDonut");
-  if (!select || !window.Chart) return;
+  var barData = { labels:["Q1","Q2","Q3","Q4"], datasets:[{ data:d.quarters, backgroundColor:"#ff2b3d", borderRadius:6, maxBarThickness:44 }]};
+  var donutData = { labels:d.categories.map(function(c){return c[0];}),
+    datasets:[{ data:d.categories.map(function(c){return c[1];}), backgroundColor:["#ff2b3d","#17140f","#c9c2af","#8f8f97"], borderWidth:0 }]};
 
-  function render(region){
-    var d = DASH_DATA[region];
-    document.getElementById("kpiRevenue").textContent = "$" + d.revenue.toLocaleString();
-    document.getElementById("kpiDeals").textContent = d.deals;
-    document.getElementById("kpiAvg").textContent = "$" + d.avg.toLocaleString();
-    document.getElementById("kpiTop").textContent = d.top;
-    document.getElementById("kpiRevenueDelta").textContent = "+" + d.deltaRev + "% QoQ";
-    document.getElementById("kpiDealsDelta").textContent = "+" + d.deltaDeals + "% QoQ";
-    document.getElementById("kpiAvgDelta").textContent = "+" + d.deltaAvg + "% QoQ";
+  if (barChart){ barChart.data = barData; barChart.update(); }
+  else { barChart = new Chart(barCanvas, { type:"bar", data:barData,
+    options:{ plugins:{legend:{display:false}}, scales:{ y:{grid:{color:"#eee7d8"}}, x:{grid:{display:false}} } } }); }
 
-    var barData = { labels:["Q1","Q2","Q3","Q4"], datasets:[{ data:d.quarters, backgroundColor:"#ff2b3d", borderRadius:6, maxBarThickness:44 }]};
-    var donutData = { labels:d.categories.map(function(c){return c[0];}),
-      datasets:[{ data:d.categories.map(function(c){return c[1];}), backgroundColor:["#ff2b3d","#17140f","#c9c2af","#8f8f97"], borderWidth:0 }]};
+  if (donutChart){ donutChart.data = donutData; donutChart.update(); }
+  else { donutChart = new Chart(donutCanvas, { type:"doughnut", data:donutData,
+    options:{ plugins:{legend:{position:"bottom", labels:{boxWidth:10, font:{size:10}}}}, cutout:"62%" } }); }
+}
 
-    if (barChart){ barChart.data = barData; barChart.update(); }
-    else { barChart = new Chart(barCanvas, { type:"bar", data:barData,
-      options:{ plugins:{legend:{display:false}}, scales:{ y:{grid:{color:"#eee7d8"}}, x:{grid:{display:false}} } } }); }
+function setupDashboard(){
+  var select = document.getElementById("dashRegion");
+  var scene = document.getElementById("datalab");
+  if (!select || !scene) return;
+  select.addEventListener("change", function(){ if (chartJsReady) renderDashboard(select.value); });
 
-    if (donutChart){ donutChart.data = donutData; donutChart.update(); }
-    else { donutChart = new Chart(donutCanvas, { type:"doughnut", data:donutData,
-      options:{ plugins:{legend:{position:"bottom", labels:{boxWidth:10, font:{size:10}}}}, cutout:"62%" } }); }
-  }
-
-  select.addEventListener("change", function(){ render(select.value); });
-  render("all");
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (!entry.isIntersecting) return;
+      obs.unobserve(scene);
+      loadChartJs(function(){ renderDashboard(select.value || "all"); });
+    });
+  }, {threshold:0.15});
+  obs.observe(scene);
 }
 
 /* ---------- command palette ---------- */
@@ -812,6 +855,24 @@ function setupGithubCard(){
       document.getElementById("ghFollowing").textContent = data.following != null ? data.following : "—";
     })
     .catch(function(){ /* leave placeholders on failure */ });
+
+  var recentEl = document.getElementById("ghRecent");
+  if (!recentEl) return;
+  fetch("https://api.github.com/users/priyanshu18611/repos?sort=updated&per_page=4")
+    .then(function(r){ return r.ok ? r.json() : Promise.reject(); })
+    .then(function(repos){
+      if (!Array.isArray(repos) || !repos.length){ recentEl.remove(); return; }
+      recentEl.innerHTML = '<span class="gh-recent-label">LATEST ON GITHUB</span>';
+      repos.forEach(function(repo){
+        var row = document.createElement("div");
+        row.className = "gh-recent-item";
+        var updated = new Date(repo.updated_at);
+        var dateStr = updated.toLocaleDateString(undefined, {month:"short", day:"numeric"});
+        row.innerHTML = '<a href="'+repo.html_url+'" target="_blank">'+repo.name+'</a><small>'+dateStr+'</small>';
+        recentEl.appendChild(row);
+      });
+    })
+    .catch(function(){ recentEl.remove(); });
 }
 
 /* ---------- init ---------- */
@@ -836,6 +897,7 @@ document.addEventListener("DOMContentLoaded", function(){
   setupHeroParticles();
   setupHeroParallax();
   setupArchiveHorizontalScroll();
+  setupVisibilityOptimization();
 
   // smooth-scroll for in-page nav links
   document.querySelectorAll('a[href^="#"]').forEach(function(a){

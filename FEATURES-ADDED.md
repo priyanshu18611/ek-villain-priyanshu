@@ -105,6 +105,31 @@ All six respect `prefers-reduced-motion` (skipped or shortened), the canvas
 pauses off-screen, and the horizontal pin only engages above 900px so
 nothing fights the scroll on phones.
 
+## Round 4 — real GitHub data + genuine optimization + delight
+Pulled live from your actual GitHub (`github.com/priyanshu18611`) — nothing
+invented:
+27. **Two more real projects added to the Archive** — **Resume Parser**
+    (Python, Streamlit, PyPDF2) and **Kisan Mitra** (a smart farming
+    dashboard for Indian farmers — HTML/CSS/JS), both pulled from your
+    actual public repos, with real GitHub links. Project count updated to 8
+    everywhere (About stats + Archive) to match reality.
+28. **Live "Latest on GitHub" feed** — the Experience section's GitHub card
+    now also fetches your 4 most recently updated public repos in real
+    time and lists them with a clickable link and last-updated date.
+29. **Lazy-loaded Chart.js** — the BI dashboard library only downloads the
+    moment the Data Analytics Lab section actually scrolls into view,
+    instead of on every page load — a real performance win for anyone who
+    never scrolls that far.
+30. **Tab title syncs to the scene you're on** — the browser tab title
+    updates live as you scroll ("EK VILLAIN — ARCHIVE · Priyanshu", etc.),
+    so the tab itself tells a story.
+31. **Favicon swaps in Villain Mode** — the tab icon itself flips from a
+    plain "EV" mark to 😈 while Villain Mode is on, and back when it's off.
+32. **Page-visibility-aware animation pausing** — the particle canvas,
+    marquee, orb glow and Villain Mode pulse all pause automatically when
+    the browser tab is in the background, saving battery and CPU for
+    anyone who leaves the tab open.
+
 ## Notes
 - Animations use GSAP + ScrollTrigger loaded from cdnjs (no build step, no
   npm install — works exactly like your current plain HTML/CSS/JS setup).
