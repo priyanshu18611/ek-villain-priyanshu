@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>EK VILLAIN — PRIYANSHU | Full Redesign</title>
+  <meta name="description" content="Priyanshu Kumar — Software Engineer • Data Analytics • Full Stack Developer. Cinematic portfolio 2026." />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Libraries (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <!-- ==================== PRELOADER ==================== -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <div class="film-countdown">
+        <div class="countdown-number" id="countdownNum">5</div>
+        <svg class="countdown-ring" viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="54" class="ring-bg" />
+          <circle cx="60" cy="60" r="54" class="ring-progress" id="ringProgress" />
+        </svg>
+      </div>
+      <div class="preloader-mark">EV</div>
+      <div class="preloader-text mono">EK VILLAIN PRODUCTIONS</div>
+      <div class="preloader-bar">
+        <div class="preloader-fill" id="preloaderFill"></div>
+      </div>
+      <div class="preloader-status mono" id="preloaderStatus">INITIALIZING ARCHIVE...</div>
+    </div>
+    <div class="film-grain"></div>
+  </div>
+
+  <!-- ==================== CUSTOM CURSOR ==================== -->
+  <div class="cursor" id="cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- ==================== PROGRESS BAR ==================== -->
+  <div class="scroll-progress">
+    <div class="scroll-progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header class="nav" id="nav">
+    <a href="#home" class="logo magnetic">
+      <span class="logo-mark">EV</span>
+      <span class="logo-text">EK VILLAIN<br><em>PRIYANSHU</em></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#work" class="nav-link">Work</a>
+      <a href="#stack" class="nav-link">Stack</a>
+      <a href="#journey" class="nav-link">Journey</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle magnetic" id="villainMode" title="Villain Mode (V)">
+        <span class="toggle-dot"></span>
+      </button>
+      <a href="#contact" class="nav-cta magnetic">Let's Talk <span>↗</span></a>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main">
+
+    <!-- SCENE 01: HERO -->
+    <section id="home" class="scene scene-hero">
+      <canvas id="heroCanvas" class="hero-canvas"></canvas>
+      <div class="hero-overlay"></div>
+
+      <div class="scene-label mono">SCENE 01 / 10</div>
+
+      <div class="hero-content">
+        <p class="hero-overline reveal">BUILD. INNOVATE. EVOLVE.</p>
+        <h1 class="hero-title">
+          <span class="line" data-split>EK</span>
+          <span class="line accent" data-split>VILLAIN</span>
+          <span class="line small" data-split>PRIYANSHU</span>
+        </h1>
+        <p class="hero-sub reveal">
+          I build digital products, analytical systems and intelligent interfaces<br>
+          where engineering meets visual storytelling.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#work" class="btn btn-primary magnetic">
+            <span>Enter Archive</span>
+            <span class="btn-arrow">→</span>
+          </a>
+          <a href="assets/resume/Priyanshu-Kumar-Resume.pdf" target="_blank" class="btn btn-outline magnetic">
+            <span>View Resume</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-meta mono">
+        <span>SOFTWARE ENGINEER · DATA · FULL STACK</span>
+        <span class="scroll-hint">SCROLL TO ENTER <span class="arrow">↓</span></span>
+      </div>
+    </section>
+
+    <!-- SCENE 02: ABOUT -->
+    <section id="about" class="scene scene-about">
+      <div class="scene-label mono">SCENE 02 / 10</div>
+      <div class="about-grid">
+        <div class="about-left">
+          <h2 class="section-title">
+            <span class="reveal-line">I TURN</span>
+            <span class="reveal-line accent">IDEAS</span>
+            <span class="reveal-line">INTO</span>
+            <span class="reveal-line">SYSTEMS.</span>
+          </h2>
+          <p class="about-text reveal">
+            Final-year Computer Science & Engineering graduate focused on software engineering, 
+            data analytics and full-stack product development.
+          </p>
+          <div class="about-tags reveal">
+            <span>Software Engineering</span>
+            <span>Data Analytics</span>
+            <span>Full Stack Development</span>
+          </div>
+        </div>
+        <div class="about-right">
+          <div class="profile-wrap reveal">
+            <img src="assets/images/priyanshu-profile.jpg" alt="Priyanshu Kumar" class="profile-img" />
+            <div class="profile-caption mono">PORTRAIT / SYSTEM BUILDER</div>
+          </div>
+          <div class="stats-row">
+            <div class="stat-card reveal">
+              <div class="stat-number" data-count="8">0</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-card reveal">
+              <div class="stat-number" data-count="3">0</div>
+              <div class="stat-label">Internships</div>
+            </div>
+            <div class="stat-card reveal">
+              <div class="stat-number" data-count="8">0</div>
+              <div class="stat-label">Certifications</div>
+            </div>
+            <div class="stat-card reveal">
+              <div class="stat-number">2022—26</div>
+              <div class="stat-label">CSE Journey</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 03: WORK / ARCHIVE -->
+    <section id="work" class="scene scene-work">
+      <div class="scene-label mono">SCENE 03 / 10</div>
+      <div class="work-header">
+        <h2 class="section-title reveal">ARCHIVE</h2>
+        <p class="work-sub reveal">Six systems. Different problems. One engineering point of view.</p>
+        <div class="filter-bar reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="ai">AI / ML</button>
+          <button class="filter-btn" data-filter="data">Data / BI</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        </div>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Project 1 -->
+        <article class="project-card" data-category="ai fullstack">
+          <div class="project-number mono">01</div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-tag">AI · Full Stack</span>
+              <span class="project-score">87 ATS</span>
+            </div>
+            <h3 class="project-title">CareerPilot AI</h3>
+            <p class="project-desc">AI-powered career intelligence platform for resume analysis, ATS optimization, job matching and coaching.</p>
+            <div class="project-stack">
+              <span>Python</span><span>FastAPI</span><span>JavaScript</span><span>AI</span>
+            </div>
+            <a href="https://careerpilot-ai-45am.onrender.com/" target="_blank" class="project-link magnetic">Open Live Product ↗</a>
+          </div>
+          <div class="project-glow"></div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card" data-category="fullstack">
+          <div class="project-number mono">02</div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-tag">IoT · MERN</span>
+              <span class="project-score live">LIVE</span>
+            </div>
+            <h3 class="project-title">EcoSentinel</h3>
+            <p class="project-desc">Wildlife conservation system with IoT simulation, REST APIs, Socket.io and alert logic.</p>
+            <div class="project-stack">
+              <span>MERN</span><span>IoT</span><span>Socket.io</span>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card" data-category="data">
+          <div class="project-number mono">03</div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-tag">Data · BI</span>
+            </div>
+            <h3 class="project-title">Enterprise Sales Analytics</h3>
+            <p class="project-desc">Star-schema analytics engine using SQL, Python, Power BI and DAX for sales intelligence.</p>
+            <div class="project-stack">
+              <span>SQL</span><span>Power BI</span><span>DAX</span>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card" data-category="ai">
+          <div class="project-number mono">04</div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-tag">Deep Learning</span>
+              <span class="project-score">76% Acc</span>
+            </div>
+            <h3 class="project-title">Brain Tumor Detection</h3>
+            <p class="project-desc">MRI image classification using CNN, TensorFlow and OpenCV.</p>
+            <div class="project-stack">
+              <span>TensorFlow</span><span>CNN</span><span>OpenCV</span>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card" data-category="ai">
+          <div class="project-number mono">05</div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-tag">Machine Learning</span>
+              <span class="project-score">R² 0.85</span>
+            </div>
+            <h3 class="project-title">Cricket Score Predictor</h3>
+            <p class="project-desc">Predictive model built with XGBoost and Scikit-learn on 19K+ records.</p>
+            <div class="project-stack">
+              <span>Python</span><span>XGBoost</span>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="project-card" data-category="ai">
+          <div class="project-number mono">06</div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-tag">NLP</span>
+            </div>
+            <h3 class="project-title">Spam Mail Detection</h3>
+            <p class="project-desc">Text classification pipeline using TF-IDF features and Logistic Regression.</p>
+            <div class="project-stack">
+              <span>Python</span><span>NLP</span><span>ML</span>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </article>
+
+        <!-- Project 7 -->
+        <article class="project-card" data-category="fullstack">
+          <div class="project-number mono">07</div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-tag">Python · Tools</span>
+            </div>
+            <h3 class="project-title">Resume Parser</h3>
+            <p class="project-desc">Extracts candidate details from PDF resumes using Streamlit and PyPDF2.</p>
+            <div class="project-stack">
+              <span>Python</span><span>Streamlit</span><span>PyPDF2</span>
+            </div>
+            <a href="https://github.com/priyanshu18611/Resume-Parser" target="_blank" class="project-link magnetic">View on GitHub ↗</a>
+          </div>
+          <div class="project-glow"></div>
+        </article>
+
+        <!-- Project 8 -->
+        <article class="project-card" data-category="fullstack">
+          <div class="project-number mono">08</div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-tag">Full Stack · Social Good</span>
+            </div>
+            <h3 class="project-title">Kisan Mitra</h3>
+            <p class="project-desc">Smart farming dashboard for Indian farmers — weather, soil health, crop tracker, pest alerts and mandi prices.</p>
+            <div class="project-stack">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <a href="https://github.com/priyanshu18611/kisan-mitra" target="_blank" class="project-link magnetic">View on GitHub ↗</a>
+          </div>
+          <div class="project-glow"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SCENE 04: STACK -->
+    <section id="stack" class="scene scene-stack">
+      <div class="scene-label mono">SCENE 04 / 10</div>
+      <h2 class="section-title reveal">
+        <span>TOOLS OF</span>
+        <span class="accent">THE TRADE</span>
+      </h2>
+      <p class="stack-intro reveal">The stack is a toolbox, not a checklist. Technology chosen according to the problem.</p>
+
+      <div class="stack-grid">
+        <div class="stack-category reveal">
+          <h3>Languages</h3>
+          <div class="stack-items">
+            <span>Python</span><span>Java</span><span>C / C++</span><span>JavaScript</span><span>SQL</span><span>HTML / CSS</span>
+          </div>
+        </div>
+        <div class="stack-category reveal">
+          <h3>Full Stack</h3>
+          <div class="stack-items">
+            <span>React</span><span>Node.js</span><span>Express</span><span>FastAPI</span><span>REST APIs</span><span>Socket.io / JWT</span>
+          </div>
+        </div>
+        <div class="stack-category reveal">
+          <h3>Data / ML</h3>
+          <div class="stack-items">
+            <span>Pandas / NumPy</span><span>Scikit-learn</span><span>XGBoost</span><span>TensorFlow</span><span>OpenCV</span><span>NLP</span>
+          </div>
+        </div>
+        <div class="stack-category reveal">
+          <h3>Analytics</h3>
+          <div class="stack-items">
+            <span>Power BI</span><span>DAX</span><span>Excel</span><span>ETL</span><span>Star Schema</span><span>Data Validation</span>
+          </div>
+        </div>
+        <div class="stack-category reveal">
+          <h3>Engineering</h3>
+          <div class="stack-items">
+            <span>Git / GitHub</span><span>VS Code</span><span>Jupyter</span><span>Postman</span><span>JIRA</span><span>Render</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="arch-diagram reveal">
+        <h4 class="mono">SYSTEM ARCHITECTURE</h4>
+        <div class="arch-flow">
+          <div class="arch-node">
+            <span class="arch-num">01</span>
+            <strong>CLIENT</strong>
+            <small>React · JS · HTML/CSS</small>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">
+            <span class="arch-num">02</span>
+            <strong>API LAYER</strong>
+            <small>FastAPI · Node · Express</small>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">
+            <span class="arch-num">03</span>
+            <strong>DATA LAYER</strong>
+            <small>MongoDB · MySQL · Pandas</small>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">
+            <span class="arch-num">04</span>
+            <strong>DEPLOY</strong>
+            <small>Docker · Render · CI</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 05: JOURNEY -->
+    <section id="journey" class="scene scene-journey">
+      <div class="scene-label mono">SCENE 05 / 10</div>
+      <h2 class="section-title reveal">THE JOURNEY</h2>
+      <p class="journey-sub reveal">2022 — 2026 · Learning · Building · Shipping</p>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-year">2022</div>
+          <div class="timeline-content">
+            <h3>Start / CSE</h3>
+            <p>Computer Science & Engineering journey begins at Shershah Engineering College, Sasaram.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-content">
+            <h3>Robotics</h3>
+            <p>Robotics internship with InfinityCore Technologies / BlinkSkills. 92% completion.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-content">
+            <h3>Railway + Cloud</h3>
+            <p>East Central Railway S&T internship + Cloud Computing training (88% score).</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-year">2026</div>
+          <div class="timeline-content">
+            <h3>Build / Deploy / Evolve</h3>
+            <p>Building software, analytics and AI products while preparing for software engineering roles.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="certs reveal">
+        <h3>Certifications</h3>
+        <div class="cert-list">
+          <span>AWS Data Engineering Foundations</span>
+          <span>Cisco Data Analytics Essentials</span>
+          <span>Cisco Data Science Essentials with Python</span>
+          <span>JPMorgan Chase Software Engineering</span>
+          <span>Deloitte Data Analytics</span>
+          <span>Mastercard Cybersecurity</span>
+          <span>NPTEL · IIT Kharagpur IoT</span>
+          <span>SAP Analytics Cloud for Planning</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 06: EXPERIENCE -->
+    <section id="experience" class="scene scene-experience">
+      <div class="scene-label mono">SCENE 06 / 10</div>
+      <h2 class="section-title reveal">FIELD NOTES</h2>
+      <p class="exp-sub reveal">Real environments. Real constraints. Learning outside the classroom.</p>
+
+      <div class="exp-grid">
+        <article class="exp-card reveal">
+          <div class="exp-date mono">DEC 2025</div>
+          <h3>Cloud Computing Intern</h3>
+          <p class="exp-company">Aagaaz Training Centre Pvt. Ltd.</p>
+          <p class="exp-desc">Four-week remote program with an 88% completion score.</p>
+        </article>
+        <article class="exp-card reveal">
+          <div class="exp-date mono">JUN — JUL 2025</div>
+          <h3>Signal & Telecommunication</h3>
+          <p class="exp-company">East Central Railway — Danapur Division</p>
+          <p class="exp-desc">Exposure to telephone exchange, optical fibre, quad cable, PA, PRS/UTS and mobile train radio systems.</p>
+        </article>
+        <article class="exp-card reveal">
+          <div class="exp-date mono">JAN — FEB 2024</div>
+          <h3>Robotics Intern</h3>
+          <p class="exp-company">InfinityCore Technologies / BlinkSkills</p>
+          <p class="exp-desc">Remote robotics internship with a 92% completion score.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SCENE 07: CONTACT / FINAL -->
+    <section id="contact" class="scene scene-contact">
+      <div class="scene-label mono">SCENE 07 / 10</div>
+      <div class="contact-content">
+        <h2 class="section-title reveal">
+          <span>READY</span>
+          <span class="accent">TO BUILD?</span>
+        </h2>
+        <p class="contact-text reveal">Have a problem worth solving? Let's turn it into something real.</p>
+
+        <div class="contact-actions reveal">
+          <a href="mailto:priyanshu@ek-villain.dev" class="btn btn-primary magnetic large">
+            <span>Send Message</span>
+            <span class="btn-arrow">→</span>
+          </a>
+        </div>
+
+        <div class="social-links reveal">
+          <a href="https://github.com/priyanshu18611" target="_blank" class="social-link magnetic">GitHub</a>
+          <a href="https://www.linkedin.com/in/priyanshuroy18" target="_blank" class="social-link magnetic">LinkedIn</a>
+          <a href="https://www.instagram.com/thepriyanshuroy.ofc" target="_blank" class="social-link magnetic">Instagram</a>
+        </div>
+      </div>
+
+      <footer class="site-footer mono">
+        <span>EK VILLAIN — PRIYANSHU</span>
+        <span>BUILD. INNOVATE. EVOLVE. © 2026</span>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- Keyboard Hint -->
+  <div class="kbd-hint mono" id="kbdHint">
+    <span>↑↓</span> or <span>J K</span> to navigate · <span>V</span> Villain Mode
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
