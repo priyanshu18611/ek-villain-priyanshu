@@ -743,14 +743,33 @@ var DASH_DATA = {
 };
 var barChart, donutChart, chartJsLoading = false, chartJsReady = false;
 
-function loadChartJs(callback){
+function loadChartJs(callback, onFail){
   if (chartJsReady){ callback(); return; }
   if (chartJsLoading){ document.addEventListener("chartjs-ready", callback, {once:true}); return; }
   chartJsLoading = true;
-  var s = document.createElement("script");
-  s.src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js";
-  s.onload = function(){ chartJsReady = true; document.dispatchEvent(new Event("chartjs-ready")); callback(); };
-  document.head.appendChild(s);
+
+  var primary = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js";
+  var fallback = "https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js";
+
+  function tryLoad(src, onErr){
+    var s = document.createElement("script");
+    s.src = src;
+    s.onload = function(){
+      if (typeof window.Chart === "undefined"){ onErr(); return; }
+      chartJsReady = true; chartJsLoading = false;
+      document.dispatchEvent(new Event("chartjs-ready"));
+      callback();
+    };
+    s.onerror = onErr;
+    document.head.appendChild(s);
+  }
+
+  tryLoad(primary, function(){
+    tryLoad(fallback, function(){
+      chartJsLoading = false;
+      if (onFail) onFail();
+    });
+  });
 }
 
 function renderDashboard(region){
@@ -781,6 +800,7 @@ function renderDashboard(region){
 function setupDashboard(){
   var select = document.getElementById("dashRegion");
   var scene = document.getElementById("datalab");
+  var frame = document.querySelector(".dash-frame");
   if (!select || !scene) return;
   select.addEventListener("change", function(){ if (chartJsReady) renderDashboard(select.value); });
 
@@ -788,7 +808,12 @@ function setupDashboard(){
     entries.forEach(function(entry){
       if (!entry.isIntersecting) return;
       obs.unobserve(scene);
-      loadChartJs(function(){ renderDashboard(select.value || "all"); });
+      loadChartJs(
+        function(){ renderDashboard(select.value || "all"); },
+        function(){
+          if (frame) frame.innerHTML = '<div class="dash-error mono">Live dashboard couldn\'t load (network/CDN blocked). <a href="https://github.com/priyanshu18611/ek-villain-priyanshu" target="_blank">View the project on GitHub</a> instead.</div>';
+        }
+      );
     });
   }, {threshold:0.15});
   obs.observe(scene);

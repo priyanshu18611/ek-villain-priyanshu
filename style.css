@@ -230,7 +230,10 @@ em,i{font-style:italic;}
 .disciplines b{font-family:var(--font-mono);font-size:10px;font-weight:500;border:1px solid var(--line-light);padding:10px 12px;line-height:1.4;border-radius:4px;}
 .about-bottom{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:end;}
 .photo-frame{margin:0;border:1px solid var(--line-light);padding:10px;border-radius:4px;}
-.photo-frame img{border-radius:2px;filter:grayscale(1) contrast(1.05);}
+.photo-frame img{
+  border-radius:2px;filter:grayscale(1) contrast(1.05);
+  width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top;
+}
 .photo-frame figcaption{font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;margin-top:10px;opacity:.6;}
 .about-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
 .about-stats strong{display:block;font-family:var(--font-serif);font-size:clamp(28px,3.4vw,42px);color:var(--red);}
@@ -576,6 +579,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   .dash-kpis{grid-template-columns:repeat(2,1fr);}
   .dash-charts{grid-template-columns:1fr;}
 }
+.dash-error{padding:40px 22px;text-align:center;font-size:11px;color:var(--ink);opacity:.7;line-height:1.8;}
+.dash-error a{color:var(--red);}
 
 /* ---- github live card ---- */
 .gh-card{

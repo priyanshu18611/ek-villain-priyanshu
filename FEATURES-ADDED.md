@@ -175,6 +175,16 @@ invented:
     tablet/mobile and under reduced motion.
 
 ## Notes
+
+### Bugfix log
+- **Dashboard stuck on "loading":** the Chart.js loader now has proper
+  `onerror` handling and a jsdelivr fallback if cdnjs is blocked, plus a
+  visible message (linking to GitHub) if both fail — instead of hanging
+  silently.
+- **Profile photo distorted:** the photo frame now uses a fixed
+  `aspect-ratio` with `object-fit: cover`, so any photo you drop in gets
+  cropped neatly into the frame instead of being stretched to fit.
+
 - Animations use GSAP + ScrollTrigger loaded from cdnjs (no build step, no
   npm install — works exactly like your current plain HTML/CSS/JS setup).
 - No content was invented: all copy, projects, stats and links are exactly
